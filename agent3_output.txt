@@ -1,0 +1,425 @@
+# 90-DAY CAREER DEVELOPMENT PLAN
+
+*Generated for: Priya Sharma | Role: Senior Software Engineer (IC4) | Goal: Staff Engineer (IC5)*
+*Plan Start Date: __________ | Plan End Date: __________ (13 weeks)*
+*Weekly Time Budget: 4–5 hours | Manager: __________ | Sponsor: __________*
+
+---
+
+## EXECUTIVE SUMMARY
+
+Priya is a high-performing Senior Engineer with exceptional technical depth (4.3/5) and delivery track record (4.0/5). Her promotion to Staff Engineer is blocked not by technical ability but by a **visibility and influence gap** — the single most common barrier at the IC4→IC5 transition. Four of five peer reviewers independently flagged that Priya's impact is significantly greater than her perceived impact, and critically, Priya herself does not recognize this deficit. This plan directly addresses that blind spot while honoring her strengths.
+
+### Focus Areas (3)
+
+| # | Focus Area | Why It Matters for IC5 | Current → Target |
+|---|-----------|----------------------|-----------------|
+| 1 | **Strategic Communication & Visibility** | Staff Engineers must shape technical direction across teams; ideas that aren't communicated don't exist | 3.1 → 3.7/5 |
+| 2 | **Delegation & Force Multiplication** | IC5 is evaluated on team-level output, not individual heroics; Priya is currently a bottleneck | Informal → Structured delegation framework |
+| 3 | **Cross-Functional Influence & Mentorship** | Staff scope requires trust-based relationships beyond the immediate team; direct report needs investment | 3.0 cross-team → 3.5; 3.2 mentoring → 3.7/5 |
+
+### Expected Outcomes (by end of 90 days)
+
+- **2 published RFCs** with cross-team review cycles completed, demonstrating architectural judgment to a wider audience
+- **3 Architecture Talks** delivered (1 attended, 2 presented), establishing Priya as a recognized technical voice in Platform Engineering
+- **Structured mentoring cadence** with direct report, including documented growth plan
+- **Active cross-functional relationships** with ≥3 engineers outside Platform Eng, evidenced by collaborative work artifacts
+- **Brag document** with 13 weeks of entries, ready for IC5 promotion packet
+- **Manager-validated readiness signal** for IC5 promotion timeline discussion at Week 13
+
+---
+
+## DEVELOPMENT GOALS
+
+### Goal 1: Become a Visible Technical Leader Through Written and Verbal Communication
+
+| Dimension | Detail |
+|-----------|--------|
+| **Specific** | Write and publish 2 RFCs with cross-team distribution; deliver 2 architecture talks to audiences of 15+ people; maintain a weekly brag document |
+| **Measurable** | RFC engagement (≥5 substantive comments from outside Platform Eng per RFC); talk feedback scores ≥4.0/5; brag document entries ≥ 1/week |
+| **Achievable** | Priya already writes excellent technical documents internally; this extends existing capability to broader audiences |
+| **Relevant** | Directly addresses the #1 development area (Strategic Communication 3.1/5) and the blind spot (visibility deficit) — the primary IC5 blocker |
+| **Time-bound** | RFC #1 published by Week 4; Talk #1 delivered by Week 5; RFC #2 published by Week 10; Talk #2 delivered by Week 11 |
+| **Success Metric** | Cross-team communication score improves from 2.8 to ≥3.3 in peer pulse check at Week 12 |
+| **IC5 Alignment** | Staff Engineers are expected to "set technical direction beyond their team" — this goal builds the artifacts and reputation to do so |
+
+### Goal 2: Shift from Individual Contributor to Force Multiplier Through Delegation
+
+| Dimension | Detail |
+|-----------|--------|
+| **Specific** | Identify and delegate 3 significant workstreams to teammates, using a structured delegation framework (context, authority level, check-in cadence); reduce personal WIP to ≤3 active items |
+| **Measurable** | Track delegation log with outcomes; measure cycle time before/after delegation; collect delegatee satisfaction feedback |
+| **Achievable** | Priya's team respects her judgment (fairness rated as a strength); delegation extends trust she has already earned |
+| **Relevant** | Addresses HIGH-priority bottleneck risk; IC5 evaluates team-level impact, not individual output volume |
+| **Time-bound** | Delegation framework created by Week 4; first delegation by Week 5; all 3 delegations active by Week 8; outcomes assessed by Week 12 |
+| **Success Metric** | At least 2 of 3 delegated workstreams completed successfully without Priya as critical path |
+| **IC5 Alignment** | Staff Engineers "make the team better" — this goal demonstrates Priya can scale her impact through others |
+
+### Goal 3: Build Cross-Functional Relationships and Invest in Mentorship
+
+| Dimension | Detail |
+|-----------|--------|
+| **Specific** | Establish recurring 1:1s with 3 engineers outside Platform Eng; transform direct-report 1:1s using a structured format (career growth, blockers, feedback exchange); participate monthly in Leadership Circle |
+| **Measurable** | 3 cross-team 1:1 relationships active by Week 6; direct report satisfaction pulse at Weeks 4, 8, 12; Leadership Circle attendance 3/3 months |
+| **Achievable** | Priya's fairness and technical depth make her a sought-after collaborator; this formalizes organic connections |
+| **Relevant** | Cross-team score (3.0) is the widest gap from same-team (3.8); mentorship score (3.2) needs direct-report investment |
+| **Time-bound** | 1:1 format redesigned by Week 2; first cross-team coffee chat by Week 3; all 3 relationships established by Week 6 |
+| **Success Metric** | Cross-functional collaboration score improves from 3.0 to ≥3.4; direct report rates 1:1 quality ≥4.0/5 at Week 12 |
+| **IC5 Alignment** | Staff Engineers "work effectively across organizational boundaries" — this goal builds the network and trust to do so |
+
+### Goal 4: Develop Executive Presence and Assertive Communication
+
+| Dimension | Detail |
+|-----------|--------|
+| **Specific** | Contribute at least one substantive point in every cross-team meeting attended; practice "claim your work" language in status updates and Slack; complete Crucial Conversations workshop |
+| **Measurable** | Self-track meeting contributions weekly (target: spoke up in ≥80% of meetings); manager confirms increased visibility in 1:1 at Week 10 |
+| **Achievable** | Priya has strong opinions (evidenced by code review quality); this channels existing conviction into verbal advocacy |
+| **Relevant** | Addresses MEDIUM-priority assertiveness gap; synergistic with Goal 1 (visibility) |
+| **Time-bound** | Active meeting participation starts Week 1; Crucial Conversations completed by Week 10; habit established by Week 13 |
+| **Success Metric** | Peer feedback at Week 12 reflects noticeable increase in meeting presence; Priya self-reports increased comfort advocating for her ideas |
+| **IC5 Alignment** | Staff Engineers must "influence without authority" and "represent their domain in leadership forums" |
+
+---
+
+## WEEK-BY-WEEK ROADMAP
+
+### 🏁 WEEKS 1–2: Quick Wins & Foundation
+*Theme: "Make the invisible visible." Establish new habits and harvest low-hanging fruit.*
+
+#### WEEK 1 — Kickoff & First Wins (~5 hrs)
+
+- [ ] **Start brag document** — Create a running doc (Google Doc or Notion) with sections: This Week's Impact, Decisions I Influenced, People I Helped. Add 3 retroactive entries from the past month. *(30 min)*
+- [ ] **Complete LR009: RFC Writing Workshop** — Attend the 4-hour hands-on session. Bring a real technical decision from current work to use as workshop material. *(4 hrs)*
+- [ ] **Attend LR008: Leadership Circle kickoff meetup** — Introduce yourself; identify 2 people from outside Platform Eng to follow up with for coffee chats. *(30 min attending + 15 min notes)*
+- [ ] **Quick Win — Rewrite & share an RFC** — Take the workshop output and polish one existing internal decision doc into proper RFC format. Share it in #platform-eng and #architecture Slack channels with a clear "requesting feedback" ask. *(included in LR009 time)*
+- [ ] **Schedule manager check-in** — Book a 30-min slot with your manager for Week 2 to share this development plan and align on IC5 timeline. *(15 min)*
+
+> **Week 1 Total: ~5 hrs** | Quick Wins Banked: 2 (brag doc, RFC share)
+
+#### WEEK 2 — Mentoring Reset & Architecture Exposure (~4.5 hrs)
+
+- [ ] **Complete LR005: Mentoring Skills for Senior Engineers** — Work through the 4-hour self-paced module. Take notes on the "coaching vs. directing" framework. *(4 hrs)*
+- [ ] **Quick Win — Transform 1:1s with direct report** — Redesign your 1:1 agenda using a structured template: (1) Their wins this week, (2) Blockers I can remove, (3) One skill they want to grow, (4) My feedback for them. Send the new format to your report before your next 1:1. *(30 min)*
+- [ ] **Attend LR006: Architecture Talk Series** — Attend this month's talk as an audience member. Take notes on presentation style, not just content. Identify a topic you could present. *(1 hr attending, but overlaps with workday — count as 0 hrs development budget)*
+- [ ] **Quick Win — Sign up to deliver Architecture Talk** — Email the organizer to claim a slot for Week 5. Proposed topic: [a recent platform decision or system design Priya led]. *(15 min)*
+- [ ] **Manager 1:1 #1** — Walk through this 90-day plan. Ask: "What does IC5-readiness look like to you? What would you need to see in the next 90 days?" Document the answer. *(30 min — within existing 1:1, 0 extra hrs)*
+
+> **Week 2 Total: ~4.75 hrs** | Quick Wins Banked: 4 (+ 1:1 format, talk signup)
+
+---
+
+### 🔨 WEEKS 3–6: Core Skill Building
+*Theme: "Build the muscles." Invest in foundational skills through structured learning while practicing in real work.*
+
+#### WEEK 3 — Technical Communication Deep Dive, Part 1 (~4.5 hrs)
+
+- [ ] **Begin LR001: Technical Communication for Engineers (Part 1 of 2)** — Complete the first 4-hour block of the workshop. Focus on the "writing for decision-makers" module. *(4 hrs)*
+- [ ] **Cross-functional outreach #1** — Have a 30-min coffee chat with one of the engineers you met at Leadership Circle. Goal: understand what challenges their team faces that intersect with Platform Eng. *(30 min)*
+- [ ] **Brag document update** — Add this week's entries. Review last week's entries and practice rewriting one in "impact language" (outcome → so what → who benefited). *(15 min)*
+- [ ] **Meeting participation practice** — In one cross-team meeting this week, prepare one question or recommendation in advance and deliver it. Note how it went in your brag doc. *(15 min prep)*
+
+> **Week 3 Total: ~5 hrs**
+
+#### WEEK 4 — Communication Workshop Completion & First Peer Check (~4.5 hrs)
+
+- [ ] **Complete LR001: Technical Communication for Engineers (Part 2 of 2)** — Finish the remaining 4-hour block. Deliverable: rewrite one section of your published RFC using workshop techniques. *(4 hrs)*
+- [ ] **Create delegation framework doc** — Using a simple template: Task/Workstream | Delegatee | Authority Level (inform/consult/own) | Check-in Cadence | Definition of Done. Identify 3 candidate workstreams from your current plate. *(30 min)*
+- [ ] **Peer Feedback Checkpoint #1** — Ask 2 trusted colleagues (1 same-team, 1 cross-team): "Over the past month, have you noticed any change in how I communicate or share my work? What's one thing I could do more of?" Document responses. *(15 min to send asks; responses async)*
+- [ ] **Direct report 1:1 check-in** — Ask your report: "How are our new 1:1s working for you? What would make them more valuable?" Adjust format based on feedback. *(within existing 1:1, 0 extra hrs)*
+
+> **Week 4 Total: ~4.75 hrs** | **30-DAY CHECKPOINT**
+
+#### WEEK 5 — First Architecture Talk & Influence Course Launch (~4.5 hrs)
+
+- [ ] **Deliver Architecture Talk #1 (LR006)** — Present your topic to the architecture talk audience (~15+ attendees). Record it if possible. Afterward, ask 2 attendees for specific feedback. *(1.5 hrs prep + delivery; some prep during work hours)*
+- [ ] **Begin LR007: Influence Without Authority (Week 1 of 4)** — Complete the first 3-hour module. Key concept to internalize this week: "mapping stakeholder interests." *(3 hrs)*
+- [ ] **Execute Delegation #1** — Hand off the first workstream from your delegation framework. Have a 20-min kickoff with the delegatee: share context, clarify authority level, agree on check-in rhythm. *(20 min)*
+- [ ] **Cross-functional outreach #2** — Schedule coffee chat with a second engineer from a different team (e.g., Product, Data, or Frontend). *(15 min to schedule; 30 min chat next week)*
+- [ ] **Brag document update** — Add architecture talk to your brag doc with audience size and one piece of positive feedback received. *(15 min)*
+
+> **Week 5 Total: ~5 hrs**
+
+#### WEEK 6 — Expanding Influence & Manager Check-in (~4.5 hrs)
+
+- [ ] **Continue LR007: Influence Without Authority (Week 2 of 4)** — Complete the second 3-hour module. This week's focus: "framing proposals for different audiences." Apply one technique to a real Slack message or email this week. *(3 hrs)*
+- [ ] **Cross-functional coffee chat #2** — Have the scheduled conversation. Ask: "If Platform Eng could do one thing differently to make your team's life easier, what would it be?" Share the insight with your team. *(30 min)*
+- [ ] **Begin drafting RFC #2** — Choose a cross-cutting technical topic (ideally something that emerged from your cross-team conversations). Create an outline and share it with one cross-team collaborator for early input before writing. *(45 min)*
+- [ ] **Manager 1:1 #2** — Agenda: Share progress on 90-day plan. Discuss delegation experiment results. Ask: "Who are the decision-makers I should be building relationships with for IC5 scope?" *(30 min — within existing 1:1, 0 extra hrs)*
+- [ ] **Meeting participation check** — Review the last 4 weeks: How many cross-team meetings did you contribute to substantively? Target: ≥80%. If below, identify what's holding you back. *(15 min self-reflection)*
+
+> **Week 6 Total: ~4.75 hrs**
+
+---
+
+### 🎯 WEEKS 7–10: Application & Practice
+*Theme: "Put it all together." Apply new skills to high-stakes, real-world situations.*
+
+#### WEEK 7 — Delegation Mastery & Ongoing Influence (~4.5 hrs)
+
+- [ ] **Continue LR007: Influence Without Authority (Week 3 of 4)** — Complete the third 3-hour module. Focus: "navigating disagreement and building consensus." *(3 hrs)*
+- [ ] **Begin LR010: Delegation & Letting Go (Part 1 of 2)** — Start the 6-hour self-paced course. Complete the first 3-hour block on "identifying what to delegate" and "matching tasks to growth opportunities." *(included as combined study — 1.5 hrs this week)*
+- [ ] **Execute Delegation #2** — Hand off the second workstream. Apply LR010 techniques: frame the delegation as a growth opportunity for the delegatee. *(20 min kickoff)*
+- [ ] **Cross-functional outreach #3** — Identify and reach out to a third engineer (ideally someone senior or in a different function like SRE or Security). *(15 min outreach)*
+- [ ] **Brag document update** — This week, also add entries about *other people's* work that you enabled through delegation or mentorship. Practice language like "I enabled X by delegating Y to Z, who delivered it successfully." *(15 min)*
+
+> **Week 7 Total: ~5 hrs**
+
+#### WEEK 8 — Delegation Completion & Peer Feedback (~4.5 hrs)
+
+- [ ] **Complete LR007: Influence Without Authority (Week 4 of 4)** — Finish the final 3-hour module. Deliverable: write a 1-page "influence map" of key stakeholders for your RFC #2 topic. *(3 hrs)*
+- [ ] **Complete LR010: Delegation & Letting Go (Part 2 of 2)** — Finish the remaining 3-hour block on "letting go of perfectionism" and "coaching through delegation." *(1.5 hrs this week — split across week)*
+- [ ] **Execute Delegation #3** — Hand off the third workstream. You should now have 3 active delegations running. Check in on Delegation #1 progress. *(30 min total check-ins)*
+- [ ] **Peer Feedback Checkpoint #2** — Ask 3 colleagues (include at least 1 cross-team): "Compared to 2 months ago, how would you describe my communication and visibility? Where am I still falling short?" Document and compare to Checkpoint #1. *(15 min to send; responses async)*
+- [ ] **Cross-functional coffee chat #3** — Meet with the third engineer. Explore potential collaboration opportunities. *(30 min)*
+
+> **Week 8 Total: ~5 hrs**
+
+#### WEEK 9 — Crucial Conversations & RFC #2 Push (~4.5 hrs)
+
+- [ ] **Begin LR003: Crucial Conversations Workshop (Day 1 of 2)** — Attend the first full-day workshop session (8 hrs, but during work hours — count 2 hrs as development time for pre-work and reflection). Focus: learn the STATE framework for high-stakes conversations. *(2 hrs pre-work/reflection)*
+- [ ] **Publish RFC #2** — Finalize and distribute your second RFC. This time, proactively send it to 3+ people outside Platform Eng with personalized asks: "I'd especially value your perspective on Section X because of your experience with Y." *(1.5 hrs writing/editing)*
+- [ ] **Delegation check-ins** — Review all 3 delegations. For any that are struggling, apply coaching techniques from LR010 rather than taking the work back. *(30 min)*
+- [ ] **Brag document update** — Include RFC #2 publication and any early feedback. Note any Crucial Conversations techniques you plan to apply. *(15 min)*
+- [ ] **Leadership Circle meetup #2 (LR008)** — Attend the monthly session. This time, volunteer to share a challenge or learning with the group (practice visibility in a safe space). *(30 min — may overlap with work hours)*
+
+> **Week 9 Total: ~4.75 hrs**
+
+#### WEEK 10 — Crucial Conversations Completion & Manager Review (~4.5 hrs)
+
+- [ ] **Complete LR003: Crucial Conversations Workshop (Day 2 of 2)** — Attend the second full-day session. Deliverable: identify 2 real conversations you've been avoiding and create a plan to have them within 2 weeks. *(2 hrs pre-work/reflection)*
+- [ ] **Practice a crucial conversation** — Have one of the identified conversations this week. It could be: advocating for a technical decision, giving difficult feedback, or pushing back on an unreasonable request. Journal the outcome. *(30 min prep + the conversation itself)*
+- [ ] **Manager 1:1 #3** — Agenda: Review progress against all 4 goals. Share peer feedback trends. Discuss: "Based on what you've seen over the past 10 weeks, what's the remaining gap to IC5? What evidence do you need?" *(30 min — within existing 1:1)*
+- [ ] **RFC #2 follow-up** — Respond to all comments on RFC #2. If there's controversy, schedule a brief sync to resolve it (practice influence skills). *(1 hr)*
+- [ ] **Brag document update** — Draft a "60-day summary" entry: list all artifacts created, talks delivered, people influenced, and delegation outcomes so far. *(30 min)*
+
+> **Week 10 Total: ~4.5 hrs** | **60-DAY CHECKPOINT**
+
+---
+
+### 🚀 WEEKS 11–13: Integration & Measurement
+*Theme: "Prove the pattern." Demonstrate sustained capability, not one-time effort.*
+
+#### WEEK 11 — Second Architecture Talk & Staff Engineer Mindset (~4.5 hrs)
+
+- [ ] **Deliver Architecture Talk #2 (LR006)** — Present a second topic, ideally related to RFC #2 or a cross-team insight from your coffee chats. Aim for a larger or different audience than Talk #1. *(1.5 hrs prep + delivery)*
+- [ ] **Begin LR002: The Staff Engineer's Path (Part 1)** — Read Chapters 1–4 (approximately 5 hrs total; split across Weeks 11–13). Focus this week on "What Staff Engineers Actually Do" and "Operating at Staff Level." *(3 hrs reading)*
+- [ ] **Have the second crucial conversation** — Execute the plan from Week 10. Reflect on what went differently than expected. *(15 min reflection)*
+- [ ] **Brag document update** — Add Talk #2 feedback and any delegation outcomes that have landed by now. *(15 min)*
+
+> **Week 11 Total: ~5 hrs**
+
+#### WEEK 12 — Peer Feedback & Synthesis (~4 hrs)
+
+- [ ] **Continue LR002: The Staff Engineer's Path (Part 2)** — Read Chapters 5–8. Focus on "Getting the Title Where You Are" and "Promotion Packets." *(3.5 hrs reading)*
+- [ ] **Peer Feedback Checkpoint #3** — Send a brief survey to 4–5 colleagues (same people as earlier checkpoints + 1 new cross-team contact): rate Priya on communication, visibility, delegation, and cross-team collaboration on a 1–5 scale. Compare to baseline scores from the original review. *(30 min to prepare and send)*
+- [ ] **Delegation retrospective** — With each delegatee, do a brief retro: What went well? What would you do differently? Document lessons for your own reference and share positive feedback upward to your manager. *(30 min)*
+- [ ] **Leadership Circle meetup #3 (LR008)** — Attend. Share one concrete thing you learned over the past 90 days. *(0 hrs — during work hours)*
+
+> **Week 12 Total: ~4.5 hrs**
+
+#### WEEK 13 — Plan Wrap-Up, Promotion Packet Draft & Next Steps (~5 hrs)
+
+- [ ] **Complete LR002: The Staff Engineer's Path (Part 3)** — Finish remaining chapters. Write a 1-page summary: "What IC5 means to me and how I'll operate at that level." *(2.5 hrs reading + 30 min writing)*
+- [ ] **Draft IC5 promotion packet** — Using your brag document, peer feedback, and artifacts (RFCs, talks, delegation outcomes), create a first draft of your promotion case. Structure: Impact, Scope, Leadership, Technical Direction. *(1.5 hrs)*
+- [ ] **Manager 1:1 #4 (Final Review)** — Agenda: Present your 90-day outcomes. Share the promotion packet draft. Ask: "Do you support putting me forward for IC5 in the next cycle? If not, what's the gap and timeline?" Discuss whether to invest in LR004 (Reforge Accelerator). *(30 min — within existing 1:1)*
+- [ ] **Self-reflection: 90-day retrospective** — Write honest answers to: What changed? What surprised me? What's still hard? What do I need in the next 90 days? *(30 min)*
+- [ ] **Decision: LR004 Reforge Engineering Leadership Accelerator** — Based on manager feedback and self-assessment, decide whether to enroll in the $2,000, 40-hour program as a next-phase investment. *(15 min decision; request approval if yes)*
+
+> **Week 13 Total: ~5 hrs** | **90-DAY CHECKPOINT**
+
+---
+
+## LEARNING RESOURCES SCHEDULE
+
+| Week | Resource ID | Resource Name | Type | Duration | Completion Target | Cost |
+|------|-----------|--------------|------|----------|-------------------|------|
+| 1 | LR009 | RFC Writing Workshop | Workshop | 4 hrs | End of Week 1 | Free |
+| 1 | LR008 | Leadership Circle Meetup #1 | Community | 0.5 hr | Week 1 | Free |
+| 2 | LR005 | Mentoring Skills for Senior Engineers | Self-paced | 4 hrs | End of Week 2 | Free |
+| 2 | LR006 | Architecture Talk Series (attend) | Event | 1 hr | Week 2 | Free |
+| 3–4 | LR001 | Technical Communication for Engineers | Workshop | 8 hrs (2×4) | End of Week 4 | Free |
+| 5–8 | LR007 | Influence Without Authority | Online course | 12 hrs (4×3) | End of Week 8 | Free |
+| 5 | LR006 | Architecture Talk Series (deliver #1) | Presentation | 1.5 hrs prep | Week 5 | Free |
+| 7–8 | LR010 | Delegation & Letting Go | Self-paced | 6 hrs (2×3) | End of Week 8 | Free |
+| 9 | LR008 | Leadership Circle Meetup #2 | Community | 0.5 hr | Week 9 | Free |
+| 9–10 | LR003 | Crucial Conversations | Workshop (2-day) | 16 hrs (2×8)* | End of Week 10 | $500 |
+| 11 | LR006 | Architecture Talk Series (deliver #2) | Presentation | 1.5 hrs prep | Week 11 | Free |
+| 11–13 | LR002 | The Staff Engineer's Path | Book | 10 hrs | End of Week 13 | Free |
+| 12 | LR008 | Leadership Circle Meetup #3 | Community | 0.5 hr | Week 12 | Free |
+| **13+** | **LR004** | **Reforge Engineering Leadership Accelerator** | **Cohort program** | **40 hrs** | **Decision at Week 13** | **$2,000** |
+
+*\*LR003 workshop days occur during work hours; only pre-work and reflection (4 hrs total) count against the development time budget.*
+
+**Total Development Investment: ~60 hrs over 13 weeks (avg. 4.6 hrs/week) | Total Cost: $500 (+ $2,000 pending decision)**
+
+---
+
+## STRETCH ASSIGNMENTS
+
+### Stretch Assignment 1: Lead a Cross-Team RFC Review Cycle
+
+| Dimension | Detail |
+|-----------|--------|
+| **Description** | Author and shepherd RFC #2 on a topic that requires input from ≥2 teams outside Platform Eng. Own the entire lifecycle: draft → review → revision → decision → communication of outcome. |
+| **Skills Practiced** | Strategic communication, cross-functional influence, assertiveness (defending technical positions), stakeholder management |
+| **Timeframe** | Weeks 6–10 |
+| **Success Criteria** | RFC receives ≥8 substantive comments from ≥3 different teams; a clear decision is reached and communicated; at least 1 person outside Platform Eng references the RFC in their own work within 30 days |
+| **Support Needed** | Manager to nominate Priya as RFC owner for a real upcoming decision; introduction to key stakeholders in adjacent teams |
+
+### Stretch Assignment 2: Mentor Direct Report Through a Challenging Project
+
+| Dimension | Detail |
+|-----------|--------|
+| **Description** | Identify a moderately complex project for your direct report that stretches their current capabilities. Coach them through it using the mentoring framework from LR005 — provide context and support, not solutions. |
+| **Skills Practiced** | Delegation, mentorship, coaching vs. directing, letting go of perfectionism |
+| **Timeframe** | Weeks 3–10 |
+| **Success Criteria** | Direct report successfully delivers the project with Priya in a coaching role (not doing the work); direct report reports feeling "challenged and supported" in Week 8 check-in; Priya's WIP count stays ≤3 |
+| **Support Needed** | Manager alignment on project selection; permission to let the timeline flex slightly if the report needs more learning time |
+
+### Stretch Assignment 3: Represent Platform Engineering in a Cross-Org Initiative
+
+| Dimension | Detail |
+|-----------|--------|
+| **Description** | Volunteer to be Platform Eng's representative in an upcoming cross-org initiative (e.g., reliability review, tech debt prioritization, platform migration planning). Attend meetings, advocate for Platform Eng's perspective, and report back to the team. |
+| **Skills Practiced** | Cross-functional relationships, assertiveness and presence, executive communication, influence without authority |
+| **Timeframe** | Weeks 5–13 (or whenever next opportunity arises) |
+| **Success Criteria** | Priya is recognized by the initiative leads as an active, valuable contributor; she brings back ≥2 actionable insights to Platform Eng; her manager receives positive unsolicited feedback about her participation |
+| **Support Needed** | Manager to identify or create the opportunity; explicit endorsement ("Priya is representing our team and has my full backing") |
+
+### Stretch Assignment 4: Create a Platform Engineering "State of the Stack" Presentation
+
+| Dimension | Detail |
+|-----------|--------|
+| **Description** | Develop a quarterly "State of the Stack" overview for Platform Engineering: key metrics, architectural decisions made, technical debt status, and upcoming priorities. Present it to engineering leadership. |
+| **Skills Practiced** | Strategic communication, executive presence, visibility, narrative construction |
+| **Timeframe** | Weeks 9–13 (prep and delivery) |
+| **Success Criteria** | Presentation delivered to ≥1 director/VP-level audience; receives positive feedback on clarity and strategic framing; becomes a recurring artifact (quarterly cadence adopted) |
+| **Support Needed** | Manager approval and coaching on audience expectations; access to relevant metrics and dashboards; dry-run opportunity with a peer before delivery |
+
+---
+
+## ACCOUNTABILITY FRAMEWORK
+
+### Manager 1:1 Topics
+
+| Checkpoint | Week | Suggested Agenda |
+|-----------|------|-----------------|
+| **Check-in #1** | Week 2 | Share 90-day plan and get buy-in. Align on IC5 criteria. Ask: "What would IC5-readiness look like to you?" Identify a sponsor. |
+| **Check-in #2** | Week 6 | Progress update on all 4 goals. Review delegation experiment. Ask: "Who should I be building relationships with?" Discuss stretch assignment opportunities. |
+| **Check-in #3** | Week 10 | Mid-plan review against metrics. Share peer feedback trends. Ask: "What's the remaining gap to IC5? What evidence do you need?" Course-correct if needed. |
+| **Check-in #4** | Week 13 | Present 90-day outcomes and draft promotion packet. Ask: "Do you support IC5 nomination in the next cycle?" Decide on LR004 enrollment. Plan next 90 days. |
+
+### Self-Reflection Prompts
+
+**Weekly (every Friday, 10 min — add to brag document):**
+1. What did I make visible this week that I would previously have kept to myself?
+2. Did I speak up in every meeting where I had a relevant perspective? If not, what held me back?
+3. What did I delegate or enable someone else to do? What did I resist delegating, and why?
+4. Who outside my immediate team did I interact with meaningfully this week?
+
+**Monthly (end of Weeks 4, 8, 13 — 20 min deeper reflection):**
+1. If I were my manager writing my IC5 promotion case right now, what would be the strongest evidence? What would be the weakest?
+2. Look at my brag document: am I capturing enough? Am I using impact language or just listing activities?
+3. What conversation am I avoiding that I know would help my growth? What's the cost of continuing to avoid it?
+4. Am I falling back into old patterns (doing everything myself, staying quiet, not sharing credit/wins)? What triggered the regression?
+
+### Peer Feedback Checkpoints
+
+| Checkpoint | Week | Who to Ask | What to Ask |
+|-----------|------|-----------|-------------|
+| **Checkpoint #1** | Week 4 | 1 same-team peer + 1 cross-team peer | "Over the past month, have you noticed any change in how I communicate or share my work? What's one thing I could do more of?" |
+| **Checkpoint #2** | Week 8 | 2 same-team peers + 1 cross-team peer | "Compared to 2 months ago, how would you describe my communication and visibility? Where am I still falling short?" |
+| **Checkpoint #3** | Week 12 | 2 same-team peers + 2 cross-team peers (include ≥1 new contact) | Quantitative pulse: rate communication, visibility, delegation, cross-team collaboration on 1–5 scale. Plus: "What's the single most impactful change you've noticed?" |
+
+---
+
+## SUCCESS METRICS
+
+### 30-Day Checkpoint (End of Week 4)
+
+| Metric | Target | How to Measure |
+|--------|--------|---------------|
+| Brag document entries | ≥12 entries (3/week) | Count entries in brag doc |
+| RFC #1 published and shared cross-team | Published with ≥3 comments from outside Platform Eng | Count comments on RFC |
+| Direct report 1:1 satisfaction | Report gives qualitative positive feedback on new format | Ask in Week 4 1:1 |
+| Architecture Talk attended | 1 attended; delivery slot booked for Week 5 | Calendar confirmation |
+| Cross-team coffee chats initiated | ≥1 completed | Log in brag document |
+| Meeting participation | Contributed in ≥70% of cross-team meetings | Self-tracked weekly |
+| Learning resources completed | LR009, LR005, LR001 (all 3 complete) | Self-report |
+
+**30-Day Gut Check:** *Do I feel like I'm starting to operate differently, or am I just going through the motions?*
+
+### 60-Day Checkpoint (End of Week 10)
+
+| Metric | Target | How to Measure |
+|--------|--------|---------------|
+| RFCs published | 2 total (RFC #2 with cross-team engagement) | Count artifacts |
+| Architecture Talks delivered | 1 delivered (Talk #1 at Week 5) | Event confirmation + feedback |
+| Delegation workstreams active | 3 workstreams delegated; ≥1 successfully completed | Delegation log |
+| Cross-team relationships | ≥3 active recurring relationships outside Platform Eng | Calendar / chat evidence |
+| Peer feedback trend | Measurable improvement noted by ≥2 peers in Checkpoint #2 vs. #1 | Compare checkpoint responses |
+| Meeting participation | Contributed in ≥80% of cross-team meetings | Self-tracked weekly |
+| Personal WIP | Reduced to ≤3 active workstreams | WIP tracker |
+| Learning resources completed | LR009, LR005, LR001, LR007, LR010, LR003 (6 of 10 complete) | Self-report |
+
+**60-Day Gut Check:** *If someone described my last 60 days at work, would "visible technical leader" be part of that description?*
+
+### 90-Day Outcomes (End of Week 13)
+
+| Metric | Target | How to Measure |
+|--------|--------|---------------|
+| Strategic Communication score | 3.1 → ≥3.5 (peer pulse estimate) | Week 12 peer feedback checkpoint |
+| Cross-team collaboration score | 3.0 → ≥3.4 (peer pulse estimate) | Week 12 peer feedback checkpoint |
+| Mentorship/feedback score | 3.2 → ≥3.7 (direct report assessment) | Direct report feedback at Week 12 |
+| RFCs published | 2 | Artifact count |
+| Architecture Talks delivered | 2 | Event records |
+| Delegation outcomes | ≥2 of 3 workstreams completed successfully by delegatees | Delegation log with outcomes |
+| Brag document completeness | ≥36 entries; 90-day summary written | Document review |
+| IC5 promotion packet | First draft complete | Artifact exists |
+| Manager IC5 support signal | Clear yes/conditional yes with gap identified | Week 13 1:1 outcome |
+| Learning resources completed | 9 of 10 (all except LR004) | Self-report |
+
+### Evidence of Success
+
+At the end of 90 days, Priya should be able to point to these **tangible artifacts** as IC5 evidence:
+
+1. **2 published RFCs** with cross-team review threads demonstrating architectural judgment and communication clarity
+2. **2 recorded/documented Architecture Talks** with audience feedback demonstrating thought leadership
+3. **A delegation log** showing 3 workstreams successfully delivered by others, demonstrating force multiplication
+4. **A brag document** with 13 weeks of entries, written in impact language, ready to feed the promotion packet
+5. **A first-draft IC5 promotion packet** structured around the company's Staff Engineer competency model
+6. **Peer feedback trend data** from 3 checkpoints showing measurable improvement in communication and visibility
+7. **3+ active cross-team relationships** that didn't exist before, demonstrating expanded scope of influence
+8. **Direct report testimonial** on improved mentoring quality and cadence
+9. **Meeting participation record** showing consistent voice in cross-team forums
+10. **Manager endorsement** (or clear gap analysis) for IC5 timeline
+
+---
+
+## NEXT STEPS
+
+### Immediate Actions (This Week)
+
+1. **Print this plan** (or bookmark it) and read it end-to-end once. Highlight anything that feels unrealistic — adjust now, not at Week 6.
+2. **Share this plan with your manager** — Schedule the Week 2 check-in. This plan only works if your manager is an active partner.
+3. **Create your brag document today** — Open a Google Doc, add the template sections, and write 3 retroactive entries. Momentum matters more than perfection.
+4. **Register for LR009 (RFC Workshop)** this week.
+5. **RSVP for LR008 (Leadership Circle)** this week.
+
+### After 90 Days: What Comes Next
+
+- **Weeks 14–26 (Months 4–6):** Deepen cross-functional scope. Take on a project that spans 2+ teams end-to-end. If enrolled in LR004 (Reforge), complete the cohort program.
+- **Weeks 27–39 (Months 7–9):** Build promotion evidence at scale. Deliver a "State of the Stack" to engineering leadership. Mentor a second person.
+- **Weeks 40–52 (Months 10–12):** Finalize promotion packet. Secure sponsor endorsement. Operate at IC5 scope before the title.
+- **Months 13–18:** Formal promotion nomination, committee review, and (if all goes well) title change.
+
+### A Note on the Blind Spot
+
+Priya, your reviewers see something important that you may not yet see in yourself: **your impact is significantly larger than your reputation.** This plan is designed to close that gap — not by changing who you are, but by making your existing excellence visible to the people who need to see it. You don't need to become someone else. You need to let more people see who you already are.
+
+The discomfort you'll feel sharing your work, speaking up in meetings, and writing about your own accomplishments is not a sign that something is wrong — it's a sign that you're growing. Lean into it.
+
+---
+
+*Plan version: 1.0 | Review cadence: Weeks 2, 6, 10, 13 | Next review: Week 2 Manager 1:1*
+*Total estimated investment: ~60 hours over 13 weeks | $500 confirmed + $2,000 pending*

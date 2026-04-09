@@ -1,0 +1,95 @@
+{
+  "work_pattern": "Standard office hours, Monday-Friday",
+  "timezone": "Asia/Kolkata",
+  "monday": {
+    "commitments": [
+      {"time": "09:00-09:30", "activity": "Team standup"},
+      {"time": "09:30-12:00", "activity": "Focus work / coding"},
+      {"time": "12:00-13:00", "activity": "Lunch break"},
+      {"time": "13:00-14:00", "activity": "1:1 with manager"},
+      {"time": "14:00-17:00", "activity": "Focus work / coding"},
+      {"time": "17:00-17:30", "activity": "End of day wrap-up"}
+    ],
+    "free": [
+      {"time": "08:00-09:00", "duration_minutes": 60, "energy": "high", "note": "Before work starts"},
+      {"time": "13:00-13:10", "duration_minutes": 10, "energy": "medium", "note": "Quick break after lunch (no 1:1 some weeks)"},
+      {"time": "17:30-18:00", "duration_minutes": 30, "energy": "low", "note": "After work wind-down"}
+    ]
+  },
+  "tuesday": {
+    "commitments": [
+      {"time": "09:00-09:30", "activity": "Team standup"},
+      {"time": "09:30-12:00", "activity": "Focus work / coding"},
+      {"time": "12:00-13:00", "activity": "Lunch break"},
+      {"time": "13:00-15:00", "activity": "Sprint planning (bi-weekly)"},
+      {"time": "15:00-17:00", "activity": "Focus work"},
+      {"time": "17:00-17:30", "activity": "End of day wrap-up"}
+    ],
+    "free": [
+      {"time": "12:30-12:50", "duration_minutes": 20, "energy": "medium", "note": "During lunch break"},
+      {"time": "17:30-18:00", "duration_minutes": 30, "energy": "low", "note": "After work wind-down"}
+    ]
+  },
+  "wednesday": {
+    "commitments": [
+      {"time": "09:00-09:30", "activity": "Team standup"},
+      {"time": "09:30-12:00", "activity": "Focus work / coding"},
+      {"time": "12:00-13:00", "activity": "Lunch break"},
+      {"time": "13:00-17:00", "activity": "Focus work / coding"},
+      {"time": "17:00-17:30", "activity": "End of day wrap-up"}
+    ],
+    "free": [
+      {"time": "12:30-12:50", "duration_minutes": 20, "energy": "medium", "note": "During lunch break"},
+      {"time": "15:00-15:10", "duration_minutes": 10, "energy": "medium", "note": "Afternoon break"},
+      {"time": "17:30-18:30", "duration_minutes": 60, "energy": "low", "note": "After work — no evening plans"}
+    ]
+  },
+  "thursday": {
+    "commitments": [
+      {"time": "09:00-09:30", "activity": "Team standup"},
+      {"time": "09:30-12:00", "activity": "Focus work / coding"},
+      {"time": "12:00-13:00", "activity": "Lunch break"},
+      {"time": "13:00-14:00", "activity": "Tech talk / knowledge sharing"},
+      {"time": "14:00-17:00", "activity": "Focus work / coding"},
+      {"time": "17:00-17:30", "activity": "End of day wrap-up"}
+    ],
+    "free": [
+      {"time": "12:30-12:50", "duration_minutes": 20, "energy": "medium", "note": "During lunch break"},
+      {"time": "17:30-18:00", "duration_minutes": 30, "energy": "low", "note": "After work wind-down"}
+    ]
+  },
+  "friday": {
+    "commitments": [
+      {"time": "09:00-09:30", "activity": "Team standup"},
+      {"time": "09:30-11:30", "activity": "Focus work / coding"},
+      {"time": "11:30-12:00", "activity": "Sprint retrospective (bi-weekly)"},
+      {"time": "12:00-13:00", "activity": "Lunch break"},
+      {"time": "13:00-16:00", "activity": "Focus work"},
+      {"time": "16:00-16:30", "activity": "Friday wrap-up"}
+    ],
+    "free": [
+      {"time": "12:30-12:50", "duration_minutes": 20, "energy": "medium", "note": "During lunch break"},
+      {"time": "16:30-17:30", "duration_minutes": 60, "energy": "low", "note": "Early Friday finish"}
+    ]
+  },
+  "saturday": {
+    "commitments": [
+      {"time": "10:00-12:00", "activity": "Personal errands"},
+      {"time": "14:00-17:00", "activity": "Family time"}
+    ],
+    "free": [
+      {"time": "08:00-10:00", "duration_minutes": 120, "energy": "high", "note": "Morning quiet time"},
+      {"time": "12:00-14:00", "duration_minutes": 120, "energy": "medium", "note": "After errands"}
+    ]
+  },
+  "sunday": {
+    "commitments": [
+      {"time": "10:00-13:00", "activity": "Family time"},
+      {"time": "15:00-18:00", "activity": "Socializing / rest"}
+    ],
+    "free": [
+      {"time": "08:00-10:00", "duration_minutes": 120, "energy": "high", "note": "Morning quiet time"},
+      {"time": "13:00-15:00", "duration_minutes": 120, "energy": "medium", "note": "Afternoon free"}
+    ]
+  }
+}

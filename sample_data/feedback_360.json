@@ -1,0 +1,253 @@
+{
+  "employee": {
+    "name": "Priya Sharma",
+    "role": "Senior Software Engineer",
+    "department": "Platform Engineering",
+    "level": "IC4",
+    "tenure_years": 3.5,
+    "current_quarter": "Q1 2025"
+  },
+  "manager_review": {
+    "reviewer": "Anita Kapoor",
+    "relationship": "Direct Manager",
+    "overall_rating": 3.8,
+    "ratings": {
+      "technical_skills": 4.2,
+      "communication": 3.0,
+      "leadership": 3.2,
+      "delivery": 4.0,
+      "collaboration": 3.5,
+      "innovation": 3.8
+    },
+    "strengths": [
+      "Consistently delivers high-quality code with minimal bugs",
+      "Deep expertise in distributed systems and microservices architecture",
+      "Takes ownership of critical production incidents and resolves them efficiently",
+      "Strong debugging skills - can trace complex issues across multiple services"
+    ],
+    "areas_for_improvement": [
+      "Needs to communicate technical decisions more proactively to stakeholders",
+      "Should delegate more instead of taking on all complex tasks herself",
+      "Could improve visibility of her work across the organization",
+      "Would benefit from mentoring junior engineers more actively"
+    ],
+    "comments": "Priya is a strong technical contributor who consistently delivers reliable solutions. To grow into a Staff Engineer role, she needs to increase her influence beyond her immediate team. She tends to work heads-down and misses opportunities to share her expertise more broadly. I'd love to see her lead a cross-team initiative next quarter and present at our internal tech talks."
+  },
+  "peer_reviews": [
+    {
+      "reviewer": "Anonymous Peer 1",
+      "relationship": "Same Team",
+      "ratings": {
+        "technical_skills": 4.5,
+        "communication": 3.2,
+        "leadership": 3.0,
+        "collaboration": 3.8,
+        "innovation": 4.0
+      },
+      "strengths": [
+        "Brilliant problem solver - she figured out our caching bottleneck when no one else could",
+        "Very thorough in code reviews, always catches subtle issues",
+        "Reliable and always meets her commitments"
+      ],
+      "areas_for_improvement": [
+        "Sometimes explains things in a way that's too technical for non-engineers",
+        "Could speak up more in team meetings - her ideas are great when she shares them",
+        "Would be great if she documented her architectural decisions more"
+      ]
+    },
+    {
+      "reviewer": "Anonymous Peer 2",
+      "relationship": "Cross-Team",
+      "ratings": {
+        "technical_skills": 4.0,
+        "communication": 2.8,
+        "leadership": 3.5,
+        "collaboration": 3.0,
+        "innovation": 3.5
+      },
+      "strengths": [
+        "Deep knowledge of our platform internals",
+        "Very responsive when we need help with integration issues",
+        "Her system design proposals are always well thought out"
+      ],
+      "areas_for_improvement": [
+        "Hard to get context on what her team is working on - more cross-team updates would help",
+        "Sometimes seems hesitant to push back on unrealistic timelines",
+        "Could be more proactive about sharing knowledge across teams"
+      ]
+    },
+    {
+      "reviewer": "Anonymous Peer 3",
+      "relationship": "Same Team",
+      "ratings": {
+        "technical_skills": 4.3,
+        "communication": 3.5,
+        "leadership": 3.2,
+        "collaboration": 4.0,
+        "innovation": 4.2
+      },
+      "strengths": [
+        "Incredible at breaking down complex problems into manageable pieces",
+        "Always willing to pair program and help when you're stuck",
+        "Her refactoring of the payment service was masterful"
+      ],
+      "areas_for_improvement": [
+        "Should take more credit for her work in sprint reviews",
+        "Could be more assertive in design discussions",
+        "Would benefit from building relationships with product managers"
+      ]
+    }
+  ],
+  "direct_report_reviews": [
+    {
+      "reviewer": "Anonymous Report 1",
+      "relationship": "Direct Report (Tech Lead role)",
+      "ratings": {
+        "technical_skills": 4.5,
+        "communication": 3.0,
+        "leadership": 3.5,
+        "collaboration": 3.5,
+        "mentorship": 3.2
+      },
+      "strengths": [
+        "Incredibly knowledgeable and always has good technical guidance",
+        "Gives me room to try things on my own before stepping in",
+        "Fair and consistent in how she evaluates work"
+      ],
+      "areas_for_improvement": [
+        "Would appreciate more regular 1:1 check-ins",
+        "Sometimes hard to read - would be helpful to know what she thinks about my career growth",
+        "Could provide feedback more frequently rather than saving it all for reviews"
+      ]
+    }
+  ],
+  "self_assessment": {
+    "strengths": [
+      "Strong technical foundation in backend systems and infrastructure",
+      "Good at identifying and resolving production issues quickly",
+      "Committed to code quality and best practices"
+    ],
+    "areas_for_improvement": [
+      "I know I need to work on communicating more with stakeholders",
+      "I want to get better at mentoring and growing the team",
+      "I sometimes take on too much instead of delegating"
+    ],
+    "career_goals": [
+      "I want to grow into a Staff Engineer role within the next 18 months",
+      "I'd like to lead a major architectural initiative",
+      "I want to become known as a go-to person for system design across the org"
+    ]
+  },
+  "learning_resources_catalog": [
+    {
+      "id": "LR001",
+      "title": "Technical Communication for Engineers",
+      "type": "workshop",
+      "provider": "Internal L&D",
+      "duration_hours": 8,
+      "skills": ["communication", "stakeholder management", "presentation"],
+      "format": "in-person",
+      "cost": "free",
+      "url": ""
+    },
+    {
+      "id": "LR002",
+      "title": "Staff Engineer: Leadership Beyond the Management Track",
+      "type": "book",
+      "provider": "Will Larson",
+      "duration_hours": 10,
+      "skills": ["leadership", "technical strategy", "influence"],
+      "format": "self-paced",
+      "cost": "free (company library)",
+      "url": "https://staffeng.com/book"
+    },
+    {
+      "id": "LR003",
+      "title": "Crucial Conversations Workshop",
+      "type": "workshop",
+      "provider": "External Vendor (VitalSmarts / Crucial Learning)",
+      "duration_hours": 16,
+      "skills": ["communication", "conflict resolution", "assertiveness"],
+      "format": "virtual",
+      "cost": "$500",
+      "url": "https://cruciallearning.com/crucial-conversations-for-mastering-dialogue/"
+    },
+    {
+      "id": "LR004",
+      "title": "Engineering Leadership Accelerator",
+      "type": "program",
+      "provider": "Reforge",
+      "duration_hours": 40,
+      "skills": ["leadership", "strategy", "cross-functional collaboration"],
+      "format": "cohort-based",
+      "cost": "$2000",
+      "url": "https://www.reforge.com/engineering-leadership"
+    },
+    {
+      "id": "LR005",
+      "title": "Mentoring Skills for Technical Leaders",
+      "type": "course",
+      "provider": "LinkedIn Learning",
+      "duration_hours": 4,
+      "skills": ["mentorship", "coaching", "feedback"],
+      "format": "online",
+      "cost": "free (company subscription)",
+      "url": "https://www.linkedin.com/learning/topics/mentoring"
+    },
+    {
+      "id": "LR006",
+      "title": "System Design Interview Prep & Architecture Talks",
+      "type": "practice",
+      "provider": "Internal Tech Talks Program",
+      "duration_hours": 2,
+      "skills": ["presentation", "system design", "visibility"],
+      "format": "recurring",
+      "cost": "free",
+      "url": ""
+    },
+    {
+      "id": "LR007",
+      "title": "Influence Without Authority",
+      "type": "course",
+      "provider": "Coursera",
+      "duration_hours": 12,
+      "skills": ["influence", "cross-team collaboration", "stakeholder management"],
+      "format": "online",
+      "cost": "free (company subscription)",
+      "url": "https://www.coursera.org/learn/influencing-people"
+    },
+    {
+      "id": "LR008",
+      "title": "Women in Tech Leadership Circle",
+      "type": "community",
+      "provider": "Internal ERG",
+      "duration_hours": 2,
+      "skills": ["networking", "leadership", "visibility", "career growth"],
+      "format": "monthly meetup",
+      "cost": "free",
+      "url": ""
+    },
+    {
+      "id": "LR009",
+      "title": "Writing Effective RFCs and Design Documents",
+      "type": "workshop",
+      "provider": "Internal Engineering",
+      "duration_hours": 4,
+      "skills": ["technical writing", "communication", "documentation"],
+      "format": "in-person",
+      "cost": "free",
+      "url": ""
+    },
+    {
+      "id": "LR010",
+      "title": "Delegation and Empowerment for Tech Leads",
+      "type": "course",
+      "provider": "Pluralsight",
+      "duration_hours": 6,
+      "skills": ["delegation", "team development", "leadership"],
+      "format": "online",
+      "cost": "free (company subscription)",
+      "url": "https://www.pluralsight.com/courses/delegation-empowerment-tech-leads"
+    }
+  ]
+}

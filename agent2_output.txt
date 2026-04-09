@@ -1,0 +1,539 @@
+# LEARNING PATHWAY DOCUMENT
+
+**Participant:** Priya Sharma
+**Role:** Senior Software Engineer (IC4), Platform Engineering
+**Career Goal:** Staff Engineer (IC5) within 18 months
+**Development Budget:** 4-5 hours/week | 13-week pathway | ~60 total development hours
+**Document Prepared:** Learning & Development Strategy Team
+**Review Date:** Quarterly (with manager check-in at Week 7 midpoint)
+
+---
+
+## 1. Development Area → Resource Mapping
+
+### Area 1: Strategic Communication & Organizational Visibility
+**Priority: CRITICAL** | Current Score: 3.1/5.0 (lowest) | Cross-Team Peer Score: 2.8/5.0
+
+| # | Resource | ID | Format | Priority | Rationale |
+|---|----------|----|--------|----------|-----------|
+| 1 | Writing Effective RFCs and Design Documents | LR009 | Workshop (4hrs) | **START HERE** | Immediate, low-effort way to improve written communication artifacts that travel across teams. Directly builds the "paper trail of influence" that Staff Engineer promotion committees look for. |
+| 2 | Technical Communication for Engineers | LR001 | Workshop (8hrs) | **PRIMARY** | Builds the verbal communication and stakeholder framing skills that address Priya's weakest score. In-person format forces real-time practice with peers. |
+| 3 | Influence Without Authority | LR007 | Course (12hrs) | **PRIMARY** | Directly targets the cross-team score of 2.8. Teaches stakeholder mapping and persuasion frameworks Priya needs when working outside her immediate team. |
+| 4 | System Design Architecture Talks | LR006 | Recurring Practice (2hrs) | **REINFORCING** | Ongoing practice venue. Presenting architecture decisions publicly is the single highest-leverage visibility activity for a Staff Engineer candidate. |
+
+### Area 2: Delegation as a Leadership Lever
+**Priority: HIGH** | Signal: Takes on too much, doesn't distribute work
+
+| # | Resource | ID | Format | Priority | Rationale |
+|---|----------|----|--------|----------|-----------|
+| 1 | Delegation and Empowerment for Tech Leads | LR010 | Course (6hrs) | **PRIMARY** | Provides tactical delegation frameworks (RACI, delegation poker, skill-will matrix). Priya needs structured models to override her instinct to "just do it herself." |
+| 2 | Staff Engineer: Leadership Beyond the Management Track | LR002 | Book (10hrs) | **PRIMARY** | Reframes delegation not as "giving away work" but as "multiplying your impact" — the mental model shift required for IC5. Chapter focus: "Being a force multiplier." |
+| 3 | Engineering Leadership Accelerator | LR004 | Cohort Program (40hrs) | **STRETCH** | Long-term investment with peer accountability. Cohort format means Priya will see how other senior ICs delegate. Reserve for Phase 3 / next quarter if budget approved. |
+
+### Area 3: Intentional Mentorship & Feedback Practice
+**Priority: HIGH** | Current Score: 3.2/5.0 | Signal: Direct report wants more 1:1s and career conversations
+
+| # | Resource | ID | Format | Priority | Rationale |
+|---|----------|----|--------|----------|-----------|
+| 1 | Mentoring Skills for Technical Leaders | LR005 | Course (4hrs) | **START HERE** | Compact, immediately applicable. Covers structured 1:1 frameworks, career conversation templates, and feedback models (SBI, COIN). Priya can apply learnings in her very next 1:1. |
+| 2 | Crucial Conversations Workshop | LR003 | Workshop (16hrs) | **SECONDARY** | Builds the deeper skill of navigating difficult feedback and having honest career conversations. Addresses the "avoiding hard conversations" pattern that often underlies low mentorship scores. |
+
+### Area 4: Cross-Functional Relationship Building
+**Priority: MEDIUM-HIGH** | Collaboration Gradient: 3.8-4.0 same-team → 3.0 cross-team
+
+| # | Resource | ID | Format | Priority | Rationale |
+|---|----------|----|--------|----------|-----------|
+| 1 | Influence Without Authority | LR007 | Course (12hrs) | **PRIMARY** | Core skill-builder. Cross-functional influence is the #1 technical competency gap that blocks IC4→IC5 promotions. This course teaches stakeholder mapping, coalition building, and cross-team negotiation. |
+| 2 | Women in Tech Leadership Circle | LR008 | Community (2hrs/mo) | **REINFORCING** | Expands Priya's network beyond Platform Engineering. Monthly cadence builds relationships over time rather than in transactional bursts. Cross-pollination with leaders from other functions. |
+| 3 | Engineering Leadership Accelerator | LR004 | Cohort Program (40hrs) | **STRETCH** | Cross-company cohort exposes Priya to collaboration patterns and organizational navigation strategies from outside her company. |
+
+### Area 5: Assertiveness & Professional Presence
+**Priority: MEDIUM** | Signal: Doesn't speak up in meetings, doesn't take credit for work
+
+| # | Resource | ID | Format | Priority | Rationale |
+|---|----------|----|--------|----------|-----------|
+| 1 | Crucial Conversations Workshop | LR003 | Workshop (16hrs) | **PRIMARY** | Assertiveness isn't personality — it's skill. This workshop provides scripts and practice for speaking up, disagreeing constructively, and claiming space in rooms. The 16-hour format includes extensive role-play. |
+| 2 | Women in Tech Leadership Circle | LR008 | Community (2hrs/mo) | **REINFORCING** | Peer community where Priya can practice visibility behaviors in a psychologically safe space before deploying them in higher-stakes settings. |
+| 3 | System Design Architecture Talks | LR006 | Recurring Practice (2hrs) | **REINFORCING** | Each talk is a low-risk, high-reward "assertiveness rep." Presenting technical work publicly is practice in taking credit and owning expertise. |
+
+---
+
+## 2. Recommended Learning Sequence
+
+> **Design Principle:** Front-load the fastest-impact resources to build momentum. Layer in community and recurring practices early so they compound. Save the largest time investments for weeks when foundational skills are in place.
+
+### PHASE 1: Foundation (Weeks 1-2) — "Quick Wins & New Habits"
+**Time Budget: 8-10 hours total | Goal: Establish rhythm, land 2-3 visible behavior changes**
+
+```
+WEEK 1 (4-5 hrs)
+├── LR009: Writing Effective RFCs and Design Documents ........... 4 hrs (attend workshop)
+│   └── IMMEDIATE APPLICATION: Rewrite one in-flight RFC using
+│       frameworks from the workshop. Share with cross-team stakeholder.
+└── LR008: Women in Tech Leadership Circle ...................... 1 hr  (attend first meetup; introduce yourself to 3 people)
+
+WEEK 2 (4-5 hrs)
+├── LR005: Mentoring Skills for Technical Leaders ............... 4 hrs (complete full course)
+│   └── IMMEDIATE APPLICATION: Restructure next 1:1 with direct report
+│       using the career conversation template from the course.
+└── LR006: System Design Architecture Talks ..................... 1 hr  (attend one session as audience; sign up to present in Week 5+)
+```
+
+**Phase 1 Success Metrics:**
+- [ ] One RFC published using new framework, shared with at least one cross-team stakeholder
+- [ ] First structured career conversation held with direct report using template
+- [ ] Signed up for Architecture Talk presentation slot (scheduled for Phase 2)
+- [ ] Attended first Women in Tech Leadership Circle meeting
+
+---
+
+### PHASE 2: Core Development (Weeks 3-8) — "Skill Building & Deliberate Practice"
+**Time Budget: 24-30 hours total | Goal: Build core competencies in communication, delegation, and influence**
+
+```
+WEEK 3 (4-5 hrs)
+├── LR001: Technical Communication for Engineers (Part 1) ....... 4 hrs (workshop day 1)
+│   └── FOCUS: Stakeholder-aware messaging, "so what?" framing,
+│       executive summary techniques
+└── LR006: System Design Architecture Talks ..................... 1 hr  (attend; prepare outline for your talk)
+
+WEEK 4 (4-5 hrs)
+├── LR001: Technical Communication for Engineers (Part 2) ....... 4 hrs (workshop day 2)
+│   └── FOCUS: Presentation skills, handling Q&A, structuring
+│       narratives for non-technical audiences
+└── PRACTICE: Present a 5-minute project update at team standup
+    using the "situation-complication-resolution" framework ........ 30 min prep
+
+WEEK 5 (5 hrs)
+├── LR007: Influence Without Authority (Modules 1-3) ........... 4 hrs
+│   └── FOCUS: Stakeholder mapping, understanding motivations,
+│       building cross-team alliances
+├── LR006: System Design Architecture Talks ..................... 1 hr  (DELIVER your first talk)
+│   └── THIS IS A KEY MILESTONE. Presenting = visibility + assertiveness practice.
+└── LR008: Women in Tech Leadership Circle ...................... attend monthly meetup
+
+WEEK 6 (5 hrs)
+├── LR007: Influence Without Authority (Modules 4-6) ........... 4 hrs
+│   └── FOCUS: Navigating disagreement, building coalitions,
+│       influencing technical decisions across teams
+└── PRACTICE: Identify one cross-team initiative where you can
+    apply stakeholder mapping. Map 3 stakeholders using the
+    framework and schedule 1:1 coffee chats with each ............. 1 hr
+
+WEEK 7 (5 hrs) — MIDPOINT CHECK-IN WITH MANAGER
+├── LR010: Delegation and Empowerment for Tech Leads (Part 1) .. 3 hrs
+│   └── FOCUS: Delegation frameworks, identifying what to delegate,
+│       matching tasks to team members' growth goals
+├── LR007: Influence Without Authority (Modules 7-9) ........... 2 hrs
+└── MANAGER CHECK-IN AGENDA:
+    ├── Review progress on communication and visibility goals
+    ├── Discuss delegation: identify 2 concrete tasks to delegate in Week 8
+    └── Calibrate on Staff Engineer promotion readiness signals
+
+WEEK 8 (4-5 hrs)
+├── LR010: Delegation and Empowerment for Tech Leads (Part 2) .. 3 hrs
+│   └── FOCUS: Delegation conversations, setting expectations,
+│       avoiding "delegation then micromanagement" pattern
+├── LR007: Influence Without Authority (Final modules) ......... 1 hr
+└── PRACTICE: Delegate one meaningful task this week using the
+    framework. Document what you delegated, to whom, and the
+    outcome for your brag document ............................... 1 hr
+```
+
+**Phase 2 Success Metrics:**
+- [ ] Delivered first Architecture Talk to cross-team audience
+- [ ] Completed stakeholder map for one cross-team initiative; held 3 coffee chats
+- [ ] Delegated at least 2 tasks using structured delegation framework
+- [ ] Direct report reports improved 1:1 quality (informal check)
+- [ ] Manager confirms visible improvement in communication behaviors
+- [ ] Influence Without Authority course completed with all exercises
+
+---
+
+### PHASE 3: Advanced Application (Weeks 9-13) — "Integration, Stretch & Sustainability"
+**Time Budget: 20-25 hours total | Goal: Tackle assertiveness head-on, build sustainable habits, begin Staff-level behaviors**
+
+```
+WEEK 9 (5 hrs)
+├── LR003: Crucial Conversations Workshop (Day 1) .............. 8 hrs (full workshop day)
+│   └── NOTE: This is a stretch week (8 hrs). Reduce other commitments.
+│       If 8 hrs is not feasible, split across Weeks 9-10.
+│   └── FOCUS: Assertive communication, speaking up when stakes are
+│       high, handling pushback without backing down
+
+WEEK 10 (4-5 hrs)
+├── LR003: Crucial Conversations Workshop (Day 2) .............. 8 hrs (full workshop day)
+│   └── FOCUS: Giving direct feedback, disagreeing with senior
+│       stakeholders, claiming credit for your work
+└── LR008: Women in Tech Leadership Circle ...................... attend monthly meetup
+    └── CHALLENGE: Share one "crucial conversation" experience at the meetup
+
+WEEK 11 (4-5 hrs)
+├── LR002: Staff Engineer (Chapters 1-5) ....................... 3 hrs
+│   └── FOCUS: "Staff archetypes" — identify which archetype fits
+│       Priya's strengths (likely "Tech Lead" or "Architect")
+├── LR006: System Design Architecture Talks ..................... 1 hr  (deliver second talk)
+└── PRACTICE: In one meeting this week, deliberately practice:
+    (1) stating your position first, (2) summarizing a decision
+    you drove, (3) sending a follow-up email that credits your
+    contribution ................................................... 30 min prep
+
+WEEK 12 (4-5 hrs)
+├── LR002: Staff Engineer (Chapters 6-10) ...................... 3 hrs
+│   └── FOCUS: "Being a force multiplier," "Creating technical
+│       strategy," "Managing technical quality"
+└── PRACTICE: Write a 1-page technical strategy proposal for one
+    area you want to own at Staff level. Share it with your
+    manager for feedback ........................................... 2 hrs
+
+WEEK 13 (3-4 hrs) — PATHWAY REVIEW & FORWARD PLANNING
+├── LR002: Staff Engineer (Chapters 11-14 + reflection) ........ 2 hrs
+├── SELF-ASSESSMENT: Re-rate yourself on all 5 development areas.
+│   Compare to baseline scores .................................... 30 min
+├── MANAGER REVIEW:
+│   ├── Present 13-week progress summary
+│   ├── Review Staff Engineer promotion readiness
+│   ├── Discuss next-quarter plan (including LR004 if budget approved)
+│   └── Set 3 goals for the next 90 days
+└── DECISION POINT: Evaluate enrollment in LR004 Engineering
+    Leadership Accelerator for next quarter ...................... discussion
+```
+
+**Phase 3 Success Metrics:**
+- [ ] Crucial Conversations workshop completed; practiced at least 3 assertive conversations
+- [ ] Staff Engineer book completed with personal archetype identified
+- [ ] Technical strategy proposal drafted and shared with manager
+- [ ] Delivered second Architecture Talk
+- [ ] Self-assessment shows measurable improvement in at least 3 of 5 areas
+- [ ] 90-day forward plan created and agreed with manager
+
+---
+
+## 3. Resource Details
+
+### LR001 — Technical Communication for Engineers
+| Field | Detail |
+|-------|--------|
+| **Format** | Workshop (in-person, 2 sessions) |
+| **Provider** | Internal L&D Team |
+| **Duration** | 8 hours (2 x 4-hour sessions) |
+| **Cost** | Free |
+| **Skills Developed** | Communication, stakeholder management, presentation |
+| **Scheduled In** | Phase 2 — Weeks 3-4 |
+| **Why This Resource** | Directly addresses Priya's lowest-rated competency (3.1/5.0). In-person workshop format provides live feedback and practice in a safe environment. Internal program means facilitators understand the company's communication culture and can give contextually relevant advice. |
+| **Expected Outcome** | Priya can structure technical updates for different audiences (engineering peers vs. product managers vs. leadership), deliver a clear "so what?" in every communication, and present confidently in cross-team settings. |
+| **Pre-Work** | Bring one recent example of a technical decision you had to communicate to a non-engineering stakeholder. |
+
+---
+
+### LR002 — Staff Engineer: Leadership Beyond the Management Track
+| Field | Detail |
+|-------|--------|
+| **Format** | Book (self-paced reading) |
+| **Author** | Will Larson |
+| **Duration** | 10 hours reading + reflection |
+| **Cost** | Free (company library) |
+| **Skills Developed** | Leadership, technical strategy, influence, force multiplication |
+| **Scheduled In** | Phase 3 — Weeks 11-13 |
+| **Why This Resource** | This is the canonical text for Priya's exact career transition (IC4 → IC5). Placed in Phase 3 intentionally — by this point, Priya will have developed enough communication and delegation skill to deeply engage with concepts like "being glue," "technical strategy," and "organizational influence." Reading it earlier risks intellectual understanding without behavioral readiness. |
+| **Expected Outcome** | Priya identifies her Staff Engineer archetype, articulates a technical strategy proposal for her domain, and has a concrete mental model for what "operating at Staff level" means day-to-day. |
+| **Reading Guide** | Chapters 1-5 (archetypes & operating models) → Chapters 6-10 (force multiplication & strategy) → Chapters 11-14 (navigating the promotion & sustaining impact). Keep a reflection journal: after each section, write 3 sentences on how it applies to your current work. |
+
+---
+
+### LR003 — Crucial Conversations Workshop
+| Field | Detail |
+|-------|--------|
+| **Format** | Workshop (virtual, 2 full days) |
+| **Provider** | External Vendor (VitalSmarts / Crucial Learning) |
+| **Duration** | 16 hours (2 x 8-hour sessions) |
+| **Cost** | $500 (requires manager approval) |
+| **Skills Developed** | Communication, conflict resolution, assertiveness |
+| **Scheduled In** | Phase 3 — Weeks 9-10 |
+| **Why This Resource** | This is the most targeted intervention for Priya's assertiveness gap. The workshop uses extensive role-play and real scenarios, which is critical — assertiveness cannot be learned from reading; it must be practiced. The $500 investment is justified by the criticality of this skill for Staff-level influence. |
+| **Expected Outcome** | Priya can initiate difficult conversations proactively, disagree with senior engineers constructively, advocate for her own work in promotion discussions, and give direct feedback to peers and reports without softening the message to the point of ambiguity. |
+| **Action Required** | Manager to approve $500 budget. Submit L&D reimbursement form. Coordinate with team to block two full days in Weeks 9-10. |
+| **ROI Note** | This is the only paid resource in the core pathway. The skill gap it addresses — assertiveness and professional presence — is the #1 reason high-performing women engineers plateau at IC4. The investment is strongly recommended. |
+
+---
+
+### LR004 — Engineering Leadership Accelerator
+| Field | Detail |
+|-------|--------|
+| **Format** | Cohort-based program (online with live sessions) |
+| **Provider** | Reforge |
+| **Duration** | 40 hours over 6-8 weeks |
+| **Cost** | $2,000 (requires director-level approval) |
+| **Skills Developed** | Leadership, strategy, cross-functional collaboration |
+| **Scheduled In** | **Not in 13-week pathway** — Recommended for Quarter 2 (Weeks 14-26) |
+| **Why This Resource** | This is the "capstone" investment. The cohort model provides peer accountability, cross-company networking, and exposure to leadership patterns from other organizations. However, it requires 5-6 hrs/week dedicated time, which would overwhelm the 13-week plan. Sequencing it after the foundation pathway ensures Priya extracts maximum value. |
+| **Expected Outcome** | Priya builds a cross-company peer network, develops a leadership operating model, and completes a capstone project that can double as a Staff Engineer promotion artifact. |
+| **Decision Gate** | At the Week 13 manager review, evaluate whether Priya's progress justifies the $2,000 investment. If the 13-week pathway shows strong results, this becomes the accelerant for the final push to Staff. |
+
+---
+
+### LR005 — Mentoring Skills for Technical Leaders
+| Field | Detail |
+|-------|--------|
+| **Format** | Online course (self-paced) |
+| **Provider** | LinkedIn Learning |
+| **Duration** | 4 hours |
+| **Cost** | Free (company subscription) |
+| **Skills Developed** | Mentorship, coaching, feedback delivery |
+| **Scheduled In** | Phase 1 — Week 2 |
+| **Why This Resource** | Placed early because the direct report has explicitly asked for better 1:1s and career conversations. This is a quick-fix resource — 4 hours of learning that can transform Priya's 1:1s starting the same week. Low effort, high relationship impact. Staff Engineers are expected to develop others; this is table-stakes. |
+| **Expected Outcome** | Priya adopts a structured 1:1 template (career conversation, feedback, blockers), uses the SBI (Situation-Behavior-Impact) model for feedback, and her direct report notices a tangible improvement in 1:1 quality within 2 weeks. |
+| **Immediate Application** | Complete the course on Monday. Restructure Tuesday's 1:1 agenda using the career conversation framework. Ask the direct report: "What do you want to be doing in 12 months?" |
+
+---
+
+### LR006 — System Design Interview Prep & Architecture Talks
+| Field | Detail |
+|-------|--------|
+| **Format** | Recurring practice sessions (in-person or hybrid) |
+| **Provider** | Internal Tech Talks Program |
+| **Duration** | 2 hours per session (recurring) |
+| **Cost** | Free |
+| **Skills Developed** | Presentation, system design, visibility, assertiveness |
+| **Scheduled In** | Ongoing — Weeks 2, 3, 5 (first talk), 11 (second talk), then monthly |
+| **Why This Resource** | This is the single highest-leverage recurring activity in the pathway. Every Architecture Talk Priya delivers is simultaneously: (1) communication practice, (2) visibility to senior engineers and leadership, (3) assertiveness training (presenting = taking credit), and (4) a Staff Engineer promotion artifact. Priya should aim to deliver one talk every 4-6 weeks going forward. |
+| **Expected Outcome** | By Week 13, Priya has delivered 2 Architecture Talks, is known by name to at least 5 engineers outside Platform Engineering, and has developed a reputation as a clear technical communicator. |
+| **Milestone Plan** | Week 2: Attend as audience → Week 5: Deliver first talk (topic: a recent platform decision) → Week 11: Deliver second talk (topic: technical strategy proposal from LR002 exercises) → Monthly thereafter. |
+
+---
+
+### LR007 — Influence Without Authority
+| Field | Detail |
+|-------|--------|
+| **Format** | Online course (self-paced with exercises) |
+| **Provider** | Coursera |
+| **Duration** | 12 hours |
+| **Cost** | Free (company subscription) |
+| **Skills Developed** | Influence, cross-team collaboration, stakeholder management |
+| **Scheduled In** | Phase 2 — Weeks 5-8 (spread across 4 weeks at ~3 hrs/week) |
+| **Why This Resource** | This course directly addresses the collaboration gradient problem (3.8 same-team vs. 3.0 cross-team). It teaches how to influence decisions, build alliances, and navigate organizational dynamics without positional authority — exactly the skill set that distinguishes IC4 from IC5. Spreading it across 4 weeks allows for deliberate practice between modules. |
+| **Expected Outcome** | Priya completes a stakeholder map for a real cross-team initiative, builds relationships with 3+ stakeholders outside Platform Engineering, and successfully influences at least one cross-team technical decision during the pathway period. |
+| **Practice Integration** | After each module, identify one real situation to apply the concept. Week 6 practice: Map 3 stakeholders and schedule coffee chats. Week 8 practice: Use the coalition-building framework on a real decision. |
+
+---
+
+### LR008 — Women in Tech Leadership Circle
+| Field | Detail |
+|-------|--------|
+| **Format** | Monthly community meetup |
+| **Provider** | Internal ERG (Employee Resource Group) |
+| **Duration** | 2 hours/month |
+| **Cost** | Free |
+| **Skills Developed** | Networking, leadership, visibility, career growth |
+| **Scheduled In** | Ongoing — Starting Week 1, monthly thereafter |
+| **Why This Resource** | This addresses three development areas simultaneously: cross-functional relationship building, assertiveness/presence, and visibility. The community provides a psychologically safe space for Priya to practice new behaviors (speaking up, sharing accomplishments, asking for what she needs) before deploying them in higher-stakes environments. The ERG also provides access to senior women leaders who can serve as sponsors and role models. |
+| **Expected Outcome** | By Week 13, Priya has attended 3 meetups, built relationships with 5+ women in leadership roles across the company, identified one potential sponsor, and practiced sharing her accomplishments in a group setting at least twice. |
+| **Engagement Strategy** | Month 1: Attend and introduce yourself to 3 people. Month 2: Share a challenge you're working on; ask for advice. Month 3: Volunteer to present a 5-minute lightning talk on something you've learned. |
+
+---
+
+### LR009 — Writing Effective RFCs and Design Documents
+| Field | Detail |
+|-------|--------|
+| **Format** | Workshop (in-person, single session) |
+| **Provider** | Internal Engineering Team |
+| **Duration** | 4 hours |
+| **Cost** | Free |
+| **Skills Developed** | Technical writing, communication, documentation |
+| **Scheduled In** | Phase 1 — Week 1 |
+| **Why This Resource** | This is the #1 quickest win in the entire pathway. RFCs and design docs are the written artifacts that make a Senior Engineer's thinking visible across the organization. Priya's cross-team communication score of 2.8 suggests her work isn't traveling beyond her immediate team. Better written artifacts are the fastest fix. This workshop is also only 4 hours and free — zero friction to start. |
+| **Expected Outcome** | Priya rewrites one in-progress RFC using the workshop framework within 48 hours. The RFC is shared with cross-team stakeholders who previously had no visibility into her work. This single action begins addressing both the communication gap and the visibility gap simultaneously. |
+| **Immediate Application** | Attend the workshop. That same week, take the most impactful technical decision you've made recently and write it up as an RFC using the new framework. Send it to at least 2 engineers outside Platform Engineering for feedback. |
+
+---
+
+### LR010 — Delegation and Empowerment for Tech Leads
+| Field | Detail |
+|-------|--------|
+| **Format** | Online course (self-paced) |
+| **Provider** | Pluralsight |
+| **Duration** | 6 hours |
+| **Cost** | Free (company subscription) |
+| **Skills Developed** | Delegation, team development, leadership |
+| **Scheduled In** | Phase 2 — Weeks 7-8 |
+| **Why This Resource** | Priya's habit of taking on too much is a blocker to Staff-level work. Staff Engineers must operate as force multipliers — you cannot do that if you're doing everyone's work. This course provides concrete frameworks (skill-will matrix, delegation levels, RACI) that transform delegation from a vague aspiration into a repeatable process. Placed in Weeks 7-8 so Priya has already built communication skills that make delegation conversations more effective. |
+| **Expected Outcome** | Priya identifies 2-3 tasks she is currently doing that should be delegated, has delegation conversations with team members using structured frameworks, and frees up 3-5 hours/week that can be redirected toward Staff-level strategic work. |
+| **Practice Integration** | Complete the course → Immediately identify 2 tasks to delegate → Have delegation conversations using the framework → Document outcomes in your brag document → Discuss results at Week 7 manager check-in. |
+
+---
+
+## 4. Quick Wins (Results Within 2 Weeks)
+
+These are high-impact, low-effort actions that will produce visible results before the end of Week 2. They are designed to build momentum, demonstrate commitment, and create early evidence of growth.
+
+### Quick Win 1: Rewrite & Share One RFC (Week 1)
+**Resource:** LR009 — Writing Effective RFCs and Design Documents
+**Effort:** 4-hour workshop + 1-2 hours writing
+**Action:** Attend the RFC workshop. Within 48 hours, rewrite your most impactful recent technical decision as a well-structured RFC. Share it with 2+ engineers outside Platform Engineering and your skip-level manager.
+**Why It's a Quick Win:** A single well-written RFC shared cross-team immediately changes how others perceive your communication skills. It creates a durable artifact that travels through the organization without you being in the room. This directly attacks the 2.8 cross-team communication score.
+**Visible Result:** Cross-team engineers see and engage with your written thinking for the first time. Your skip-level manager has a concrete artifact demonstrating Staff-level communication.
+
+### Quick Win 2: Transform Your 1:1s (Week 2)
+**Resource:** LR005 — Mentoring Skills for Technical Leaders
+**Effort:** 4-hour course + 30 minutes prep
+**Action:** Complete the LinkedIn Learning course. Before your next 1:1 with your direct report, restructure the agenda using the career conversation framework. Open with: "I want to make our 1:1s more valuable for your growth. What do you want to be doing in 12 months?"
+**Why It's a Quick Win:** Your direct report has explicitly asked for better 1:1s and career conversations. Responding to specific feedback with visible behavior change is the fastest way to improve a relationship and build your reputation as a developer of people. Staff Engineers are evaluated on whether they grow others.
+**Visible Result:** Direct report experiences an immediately better 1:1. Word travels. Your manager hears you're investing in people.
+
+### Quick Win 3: Show Up at the Leadership Circle (Week 1)
+**Resource:** LR008 — Women in Tech Leadership Circle
+**Effort:** 2 hours (attend the next scheduled meetup)
+**Action:** Attend the next meeting. Introduce yourself to at least 3 people. Share that you're working toward Staff Engineer and are investing in your development. Ask one senior attendee: "What's one thing you wish you'd done differently on your path to senior leadership?"
+**Why It's a Quick Win:** Showing up is the hardest part. One meeting expands your network beyond Platform Engineering, gives you potential sponsors, and makes you visible to the ERG leadership (who often sit on promotion and talent review committees).
+**Visible Result:** 3+ new cross-functional relationships. A potential mentor or sponsor connection. A sense of community that sustains the harder work ahead.
+
+### Quick Win 4: Sign Up to Give an Architecture Talk (Week 2)
+**Resource:** LR006 — System Design Architecture Talks
+**Effort:** 30 minutes to sign up + 1 hour to attend one as audience
+**Action:** Attend one Architecture Talk session as an audience member in Week 2. Before you leave, sign up for a presentation slot in Week 5. Choose a topic you already know well (a recent platform decision, a system design you led). The act of committing creates accountability.
+**Why It's a Quick Win:** The commitment itself is the win. Signing up for a public presentation signals to yourself and others that you are stepping into visibility. The actual talk is in Week 5, giving you 3 weeks to prepare.
+**Visible Result:** Your name appears on the Architecture Talks schedule. Colleagues notice. You've made a public commitment that's hard to back out of.
+
+### Quick Win 5: Start a Brag Document (Week 1)
+**Resource:** No formal resource — personal practice
+**Effort:** 30 minutes to set up + 5 minutes/day ongoing
+**Action:** Create a running document (Google Doc, Notion page, or markdown file) titled "Priya's Impact Log." Every day, spend 5 minutes writing down: (1) what you accomplished, (2) who it impacted, (3) what you learned. This document becomes the raw material for your promotion packet, performance reviews, and self-advocacy conversations.
+**Why It's a Quick Win:** Priya's assertiveness gap includes "doesn't take credit for work." A brag document externalizes the habit of tracking impact. It's also the single most recommended practice from every Staff Engineer who's been through the promotion process. Starting it in Week 1 means 13 weeks of documented impact by the pathway's end.
+**Visible Result:** By Week 13, you have a comprehensive record of your contributions that makes writing your promotion packet straightforward rather than agonizing.
+
+---
+
+## 5. Deep Investments (Sustained Growth Programs)
+
+These are the larger commitments that drive transformational (not incremental) growth. They require significant time, and in some cases budget, but they deliver the deepest, most durable skill development.
+
+### Deep Investment 1: Crucial Conversations Workshop (LR003)
+**Investment:** 16 hours + $500 | Weeks 9-10
+**Why It's Worth It:** Assertiveness is the development area most likely to be dismissed as "personality" rather than skill. It is not. It is a learnable, practicable behavior — but it requires immersive, scenario-based training with real-time feedback. A self-paced course will not build this muscle. The 16-hour workshop format with extensive role-play is specifically designed to create the psychological safety and repeated practice needed to shift deeply ingrained communication patterns. For Priya — who has been socialized to not take up space — this workshop is the intervention most likely to produce a step-function change in her leadership presence. The $500 cost is trivial relative to the career impact.
+**Expected Transformation:** Priya moves from "stays quiet in meetings and lets others take credit" to "states her position clearly, disagrees constructively, and ensures her contributions are visible." This is the difference between a perpetual IC4 and a Staff Engineer.
+**Sustainability Plan:** After the workshop, Priya practices one "crucial conversation" per week for 8 weeks, journaling the situation, her approach, and the outcome. She shares learnings monthly at the Women in Tech Leadership Circle.
+
+### Deep Investment 2: Engineering Leadership Accelerator — Reforge (LR004)
+**Investment:** 40 hours + $2,000 | Recommended for Weeks 14-26 (Quarter 2)
+**Why It's Worth It:** This is the capstone investment that integrates everything Priya has built in the 13-week foundation pathway. The cohort-based format means she's learning alongside other senior ICs navigating the same IC4→IC5 transition, providing peer accountability and cross-company perspective that no internal resource can replicate. The Reforge curriculum covers organizational navigation, technical strategy, and cross-functional leadership at a depth that goes beyond any single course. This program has a track record of producing Staff Engineer promotions.
+**Decision Criteria:** Enroll Priya if, at the Week 13 review: (1) she has completed 80%+ of the 13-week pathway, (2) her manager observes measurable improvement in communication and delegation, and (3) the $2,000 budget is approved at director level. If budget is a constraint, this can be deferred to the second half of the year.
+**Expected Transformation:** Priya develops a leadership operating model, builds a cross-company network of senior ICs, and produces a capstone project (e.g., a technical strategy document) that serves as a direct Staff Engineer promotion artifact.
+
+### Deep Investment 3: Staff Engineer Book + Technical Strategy Project (LR002 + Applied Practice)
+**Investment:** 10 hours reading + 5-10 hours writing | Weeks 11-13 and beyond
+**Why It's Worth It:** The book alone is a 10-hour investment, but the real value comes from the applied practice: writing a 1-page technical strategy proposal for Priya's domain. This proposal serves triple duty — it's (1) a learning exercise in strategic thinking, (2) a communication artifact demonstrating Staff-level vision, and (3) a concrete promotion packet piece that Priya's manager can reference in calibration. Very few IC4s proactively write technical strategy. Doing so is one of the strongest signals that an engineer is ready for IC5.
+**Expected Transformation:** Priya shifts from "excellent executor of assigned technical work" to "proactive shaper of technical direction." Her manager begins describing her as someone who "sees around corners" and "drives technical strategy" — language that appears in Staff Engineer promotion criteria.
+
+---
+
+## 6. Community & Networking Opportunities
+
+> **Strategic Context:** Priya's collaboration gradient (3.8-4.0 same-team vs. 3.0 cross-team) reveals that her professional network is concentrated within Platform Engineering. For Staff Engineer promotion, she needs to be known and respected across the engineering organization. These community and networking opportunities are not "nice-to-haves" — they are the connective tissue that makes all other development areas stick.
+
+### 6.1 Women in Tech Leadership Circle (LR008)
+- **Cadence:** Monthly, 2 hours/session
+- **Starting:** Week 1 (immediate)
+- **Networking Strategy:**
+  - Month 1: Attend. Introduce yourself to 3 people. Learn who the senior women leaders are.
+  - Month 2: Share a challenge. Ask for advice. Identify one person who could be a sponsor.
+  - Month 3: Volunteer for a lightning talk. Offer to help organize an event.
+  - Month 4+: Become a regular. Mentor a newer attendee. Build reciprocal relationships.
+- **Target Connections:** Women at Staff+ level from Product, Infrastructure, and Data Engineering. These are the cross-functional relationships that accelerate Priya's visibility and provide sponsorship during promotion discussions.
+
+### 6.2 Architecture Talks Community (LR006)
+- **Cadence:** Recurring (biweekly or monthly, varies by program)
+- **Starting:** Week 2 (attend), Week 5 (present)
+- **Networking Strategy:**
+  - Attending talks by senior engineers builds awareness of how Staff-level engineers communicate.
+  - Presenting your own talks positions you as a technical authority and makes you visible to the senior engineers who attend.
+  - After each talk (yours or others'), follow up with the presenter or an audience member via Slack or email: "I found your point about X really interesting. I've been thinking about a similar problem in Platform — could we chat for 15 minutes?"
+- **Target Connections:** Principal Engineers, Staff Engineers, and Engineering Managers who attend Architecture Talks. These are the people who will vouch for Priya's technical judgment in promotion calibrations.
+
+### 6.3 Cross-Team Coffee Chats (Self-Directed Practice)
+- **Cadence:** 1 per week, 30 minutes each
+- **Starting:** Week 5 (after Influence Without Authority Modules 1-3)
+- **Networking Strategy:**
+  - Use the stakeholder map from LR007 to identify engineers, PMs, and TPMs on teams that depend on or interact with Platform Engineering.
+  - Schedule 30-minute informal coffee chats (virtual or in-person).
+  - Use this framework for each conversation:
+    1. "What are the biggest challenges your team is facing right now?"
+    2. "How does Platform Engineering's work affect your team?"
+    3. "Is there anything we could do differently that would make your team's life easier?"
+  - Document insights and share relevant ones with your manager and team.
+- **Target Connections:** 8-10 cross-team engineers and PMs over the 13-week pathway. Prioritize teams where collaboration friction has been highest.
+- **Why This Matters:** These conversations do three things at once: (1) build the relationships that raise Priya's cross-team score, (2) surface insights that inform Priya's technical strategy work, and (3) make Priya known as someone who proactively seeks to understand the broader system — a Staff Engineer behavior.
+
+### 6.4 Peer Learning Partnership (Self-Directed)
+- **Cadence:** Biweekly, 45 minutes each
+- **Starting:** Week 3
+- **How to Set Up:** Identify one peer (IC4 or aspiring IC5) who is also working on their development. Commit to biweekly check-ins where you each share:
+  1. What skill you practiced this week
+  2. What went well
+  3. Where you struggled
+  4. What you'll try next
+- **Why This Matters:** Behavior change is hard to sustain alone. A peer accountability partner provides honest feedback, emotional support, and the social commitment that prevents backsliding. Ideally, find someone from a different team to simultaneously build a cross-functional relationship.
+
+### 6.5 Skip-Level & Sponsor Cultivation
+- **Cadence:** Quarterly (or when opportunity arises)
+- **Starting:** Week 6 (after initial communication skill-building)
+- **Strategy:**
+  - Identify 1-2 senior leaders (Director+ level) who have visibility into promotion decisions for your organization.
+  - Request a 30-minute skip-level conversation. Frame it as: "I'm working toward Staff Engineer and would value your perspective on what you look for in candidates."
+  - Share your RFC or technical strategy document as evidence of your work.
+  - After the conversation, follow up with a brief thank-you and periodic updates on your progress.
+- **Why This Matters:** Sponsors — not mentors — drive promotions. Sponsors are senior leaders who advocate for you in rooms you're not in. Priya needs at least one sponsor who can speak to her impact and readiness during calibration discussions. This does not happen by accident; it must be cultivated intentionally.
+
+---
+
+## Appendix: Pathway Summary at a Glance
+
+### Time Investment Overview
+| Phase | Weeks | Hours | Focus |
+|-------|-------|-------|-------|
+| Phase 1: Foundation | 1-2 | 8-10 hrs | Quick wins, new habits, first connections |
+| Phase 2: Core Development | 3-8 | 24-30 hrs | Skill building in communication, influence, delegation |
+| Phase 3: Advanced Application | 9-13 | 20-25 hrs | Assertiveness, strategic thinking, integration |
+| **Total** | **1-13** | **52-65 hrs** | **~4-5 hrs/week average** |
+
+### Cost Summary
+| Resource | Cost | Status |
+|----------|------|--------|
+| LR001, LR002, LR005, LR006, LR007, LR008, LR009, LR010 | Free | Company-sponsored |
+| LR003 — Crucial Conversations Workshop | $500 | Requires manager approval |
+| LR004 — Engineering Leadership Accelerator | $2,000 | Quarter 2 — requires director approval |
+| **13-Week Pathway Total** | **$500** | |
+| **Full-Year Pathway Total (if LR004 approved)** | **$2,500** | |
+
+### Resource Sequencing Summary
+```
+Week:  1    2    3    4    5    6    7    8    9    10   11   12   13
+       │    │    │    │    │    │    │    │    │    │    │    │    │
+LR009  ████                                                          RFC Workshop
+LR005       ████                                                     Mentoring Skills
+LR008  ○         ○              ○              ○              ○       Leadership Circle (monthly)
+LR006  ·    ○    ○    ·    ████ ·    ·    ·    ·    ·    ████ ·    ·  Architecture Talks
+LR001            ████ ████                                           Tech Communication
+LR007                      ████ ████ ████ ████                       Influence w/o Authority
+LR010                                 ████ ████                      Delegation
+LR003                                           ████ ████           Crucial Conversations
+LR002                                                     ████ ████ ████  Staff Engineer Book
+
+████ = Active learning   ○ = Recurring session   · = Attend/observe
+```
+
+### Key Milestones
+| Week | Milestone | Evidence |
+|------|-----------|----------|
+| 1 | First RFC shared cross-team | RFC document + distribution list |
+| 2 | First structured career 1:1 with direct report | Updated 1:1 template in use |
+| 5 | First Architecture Talk delivered | Talk recording/slides |
+| 7 | Midpoint manager check-in | Progress review document |
+| 8 | First tasks delegated using framework | Delegation log in brag document |
+| 10 | Crucial Conversations workshop complete | Workshop certificate + practice log |
+| 11 | Second Architecture Talk delivered | Talk recording/slides |
+| 12 | Technical strategy proposal drafted | 1-page strategy document |
+| 13 | Pathway review complete; 90-day forward plan set | Self-assessment + manager review |
+
+---
+
+*This pathway is designed to be a living document. Priya and her manager should review it at the Week 7 midpoint and adjust based on what's working, what's not, and any changes in organizational context. The goal is not to check every box — it's to build the skills, relationships, and visibility that make Staff Engineer promotion an inevitable conclusion rather than an uncertain aspiration.*

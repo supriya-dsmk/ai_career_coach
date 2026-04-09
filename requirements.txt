@@ -1,0 +1,15 @@
+# Core dependencies
+python-dotenv>=1.0.0
+
+# LLM Clients (install based on your chosen backend)
+# For Anthropic Claude (same models as Windsurf)
+anthropic>=0.40.0
+
+# For OpenAI (optional)
+openai>=1.0.0
+
+# For Ollama local models
+requests>=2.31.0
+
+# Optional: for better SSL handling on Windows
+truststore>=0.8.0
