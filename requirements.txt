@@ -13,3 +13,6 @@ requests>=2.31.0
 
 # Optional: for better SSL handling on Windows
 truststore>=0.8.0
+
+# For dashboard visualizations
+plotly>=5.0.0

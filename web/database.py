@@ -69,6 +69,7 @@ def init_db() -> None:
                 agent2_output  TEXT,
                 agent3_output  TEXT,
                 input_summary  TEXT,
+                timeline_days  INTEGER DEFAULT 90,
                 created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 accepted_at    TIMESTAMP
             );
@@ -85,6 +86,25 @@ def init_db() -> None:
             """
         )
         conn.commit()
+    finally:
+        conn.close()
+
+    # Migrations -- add columns that may not exist in older databases
+    _migrate_db()
+
+
+def _migrate_db() -> None:
+    """Add columns introduced after the initial schema."""
+    conn = get_connection()
+    try:
+        # Check if timeline_days column exists in plans table
+        cursor = conn.execute("PRAGMA table_info(plans)")
+        columns = {row["name"] for row in cursor.fetchall()}
+        if "timeline_days" not in columns:
+            conn.execute(
+                "ALTER TABLE plans ADD COLUMN timeline_days INTEGER DEFAULT 90"
+            )
+            conn.commit()
     finally:
         conn.close()
 
@@ -154,6 +174,7 @@ def save_plan(
     agent2_output: str = "",
     agent3_output: str = "",
     input_summary: str = "",
+    timeline_days: int = 90,
 ) -> int:
     """Save a new plan with ``status='draft'``.  Returns the plan ``id``."""
     conn = get_connection()
@@ -162,11 +183,11 @@ def save_plan(
             """
             INSERT INTO plans
                 (user_id, plan_markdown, agent1_output, agent2_output,
-                 agent3_output, input_summary)
-            VALUES (?, ?, ?, ?, ?, ?)
+                 agent3_output, input_summary, timeline_days)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (user_id, plan_markdown, agent1_output, agent2_output,
-             agent3_output, input_summary),
+             agent3_output, input_summary, timeline_days),
         )
         conn.commit()
         return cur.lastrowid
@@ -200,6 +221,36 @@ def reject_plan(plan_id: int) -> None:
         conn.close()
 
 
+def update_plan_status(plan_id: int, status: str) -> None:
+    """Set the plan's status to an arbitrary value.
+
+    Valid statuses: ``'draft'``, ``'accepted'``, ``'in_progress'``,
+    ``'completed'``, ``'rejected'``.
+    """
+    conn = get_connection()
+    try:
+        conn.execute(
+            "UPDATE plans SET status = ? WHERE id = ?",
+            (status, plan_id),
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def update_plan_markdown(plan_id: int, plan_markdown: str) -> None:
+    """Update the plan's markdown content (e.g. after user edits)."""
+    conn = get_connection()
+    try:
+        conn.execute(
+            "UPDATE plans SET plan_markdown = ? WHERE id = ?",
+            (plan_markdown, plan_id),
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
 def get_user_plans(user_id: int) -> list:
     """Return all plans for a user, newest first."""
     conn = get_connection()
@@ -227,13 +278,17 @@ def get_plan(plan_id: int) -> Optional[dict]:
 
 
 def get_active_plan(user_id: int) -> Optional[dict]:
-    """Return the most recent *accepted* plan for the user, or ``None``."""
+    """Return the most recent active plan for the user, or ``None``.
+
+    An active plan is one whose status is ``'accepted'``, ``'in_progress'``,
+    or ``'completed'``.
+    """
     conn = get_connection()
     try:
         row = conn.execute(
             """
             SELECT * FROM plans
-            WHERE user_id = ? AND status = 'accepted'
+            WHERE user_id = ? AND status IN ('accepted', 'in_progress', 'completed')
             ORDER BY accepted_at DESC
             LIMIT 1
             """,

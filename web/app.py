@@ -25,7 +25,8 @@ load_dotenv(override=True, dotenv_path=PROJECT_ROOT / ".env")
 
 from web.database import (
     create_user, authenticate_user, get_user_by_id,
-    save_plan, accept_plan, reject_plan,
+    save_plan, accept_plan, reject_plan, update_plan_markdown,
+    update_plan_status,
     get_user_plans, get_plan, get_active_plan,
     init_progress_from_plan, get_progress, update_task_completion,
     get_progress_summary,
@@ -68,6 +69,8 @@ st.markdown("""
     .badge-accepted  {background: #d4edda; color: #155724;}
     .badge-draft     {background: #fff3cd; color: #856404;}
     .badge-rejected  {background: #f8d7da; color: #721c24;}
+    .badge-in_progress {background: #cce5ff; color: #004085;}
+    .badge-completed {background: #d1ecf1; color: #0c5460;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -180,7 +183,7 @@ def _read_uploaded(uploaded) -> str | None:
         return uploaded.read().decode("utf-8", errors="replace")
 
 
-def run_pipeline(career_text: str, schedule_text: str, status_area) -> dict:
+def run_pipeline(career_text: str, schedule_text: str, status_area, timeline_days: int = 90) -> dict:
     """Run the 4-agent pipeline and return outputs dict."""
     backend = get_backend_from_env()
     model = os.getenv("OLLAMA_MODEL", None)
@@ -216,6 +219,15 @@ def run_pipeline(career_text: str, schedule_text: str, status_area) -> dict:
                 "Below is the user's schedule/availability information. "
                 "Analyze it and identify all available learning windows.\n\n"
                 f"{schedule_text}\n\n"
+                "Complete your assigned task as described in your role."
+            )
+        elif idx == 3:
+            num_weeks = timeline_days // 7
+            task = (
+                f"IMPORTANT: The user has requested a **{timeline_days}-day** "
+                f"development plan (~{num_weeks} weeks). Do NOT default to 90 days. "
+                f"Structure the entire plan across {num_weeks} weeks, adjusting "
+                f"milestones, checkpoints, and phases proportionally.\n\n"
                 "Complete your assigned task as described in your role."
             )
         else:
@@ -373,6 +385,22 @@ def page_input():
 
     st.markdown("---")
 
+    st.markdown("#### Plan Timeline")
+    st.caption("How many days should your development plan span? Default is 90 days.")
+    timeline_days = st.slider(
+        "Timeline (days)",
+        min_value=30,
+        max_value=365,
+        value=90,
+        step=15,
+        help="Choose a duration between 30 and 365 days. The plan will be structured into weekly milestones within this period.",
+        key="timeline_slider",
+    )
+    num_weeks = timeline_days // 7
+    st.info(f"Your plan will cover **{timeline_days} days** (~**{num_weeks} weeks**).")
+
+    st.markdown("---")
+
     if st.button("Generate My Development Plan", type="primary", use_container_width=True):
         # Assemble career input
         parts = [f"**User Email**: {user['email']}"]
@@ -410,6 +438,7 @@ def page_input():
         st.session_state["_schedule_input"] = combined_schedule
         st.session_state["_input_summary"] = (career_text.strip() or (file_content or "")[:200])[:300]
         st.session_state["_display_name"] = display_name
+        st.session_state["_timeline_days"] = timeline_days
         go("running")
         st.rerun()
 
@@ -420,6 +449,7 @@ def page_running():
 
     career_input = st.session_state.get("_career_input", "")
     schedule_input = st.session_state.get("_schedule_input", "")
+    timeline_days = st.session_state.get("_timeline_days", 90)
 
     if not career_input:
         st.warning("No input found. Please go back and provide career input.")
@@ -430,7 +460,7 @@ def page_running():
 
     status = st.empty()
     try:
-        outputs = run_pipeline(career_input, schedule_input, status)
+        outputs = run_pipeline(career_input, schedule_input, status, timeline_days)
     except Exception as e:
         st.error(f"Pipeline error: {e}")
         if st.button("Back to Input"):
@@ -447,16 +477,17 @@ def page_running():
         agent2_output=outputs.get("agent2", ""),
         agent3_output=outputs.get("agent3", ""),
         input_summary=st.session_state.get("_input_summary", ""),
+        timeline_days=timeline_days,
     )
 
-    st.session_state.draft_plan = {"plan_id": plan_id, **outputs}
+    st.session_state.draft_plan = {"plan_id": plan_id, "timeline_days": timeline_days, **outputs}
     go("review")
     st.rerun()
 
 
 def page_review():
     st.markdown('<p class="main-header">Review Your Plan</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">Read through the plan below. Accept it to save and get it emailed to you, or reject to start over.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Read through the plan below. You can edit it before accepting, or reject to start over.</p>', unsafe_allow_html=True)
 
     draft = st.session_state.draft_plan
     if not draft:
@@ -477,18 +508,65 @@ def page_review():
         st.markdown(draft.get("agent3", ""))
 
     st.markdown("---")
-    st.markdown("### Your 90-Day Development Plan")
-    st.markdown(plan_md)
+    tl = draft.get("timeline_days", 90)
+    st.markdown(f"### Your {tl}-Day Development Plan")
+
+    # Initialise edit mode flag
+    if "review_edit_mode" not in st.session_state:
+        st.session_state.review_edit_mode = False
+
+    # Toggle between view and edit
+    edit_toggle_col, _ = st.columns([1, 3])
+    with edit_toggle_col:
+        if st.session_state.review_edit_mode:
+            if st.button("Cancel Editing", use_container_width=True):
+                st.session_state.review_edit_mode = False
+                # Discard unsaved edits
+                st.session_state.pop("_edited_plan", None)
+                st.rerun()
+        else:
+            if st.button("Edit Plan", use_container_width=True):
+                st.session_state.review_edit_mode = True
+                st.rerun()
+
+    if st.session_state.review_edit_mode:
+        # Editable text area pre-filled with the current plan markdown
+        edited_plan = st.text_area(
+            "Edit your plan (Markdown)",
+            value=plan_md,
+            height=500,
+            key="_edited_plan_area",
+        )
+
+        save_col, preview_col, _ = st.columns([1, 1, 2])
+        with save_col:
+            if st.button("Save Edits", type="primary", use_container_width=True):
+                # Persist the edits in draft_plan and in the database
+                st.session_state.draft_plan["plan"] = edited_plan
+                update_plan_markdown(draft["plan_id"], edited_plan)
+                st.session_state.review_edit_mode = False
+                st.toast("Edits saved!")
+                st.rerun()
+        with preview_col:
+            show_preview = st.checkbox("Show preview", value=False)
+
+        if show_preview:
+            st.markdown("#### Preview")
+            st.markdown(edited_plan)
+    else:
+        st.markdown(plan_md)
+
     st.markdown("---")
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col1:
         if st.button("Accept Plan", type="primary", use_container_width=True):
             plan_id = draft["plan_id"]
+            final_plan = draft["plan"]  # already updated if user edited
             accept_plan(plan_id)
 
             # Initialize progress tasks
-            tasks = extract_tasks_from_plan(plan_md)
+            tasks = extract_tasks_from_plan(final_plan)
             if tasks:
                 init_progress_from_plan(plan_id, tasks)
 
@@ -497,7 +575,7 @@ def page_review():
             ok, msg = send_plan_email_safe(
                 user["email"],
                 user.get("name", user["email"]),
-                plan_md,
+                final_plan,
             )
             if ok:
                 st.toast("Plan emailed to you!")
@@ -505,6 +583,7 @@ def page_review():
                 st.toast(f"Email: {msg}", icon=":material/info:")
 
             st.session_state.draft_plan = None
+            st.session_state.pop("review_edit_mode", None)
             go("dashboard")
             st.rerun()
 
@@ -512,13 +591,14 @@ def page_review():
         if st.button("Reject & Start Over", use_container_width=True):
             reject_plan(draft["plan_id"])
             st.session_state.draft_plan = None
+            st.session_state.pop("review_edit_mode", None)
             go("input")
             st.rerun()
 
     with col3:
         st.download_button(
             "Download as Markdown",
-            data=plan_md,
+            data=draft["plan"],
             file_name="career_development_plan.md",
             mime="text/markdown",
             use_container_width=True,
@@ -542,13 +622,51 @@ def page_dashboard():
     total = summary["total"]
     completed = summary["completed"]
     pct = int((completed / total * 100) if total else 0)
+    timeline_days = plan_row.get("timeline_days") or 90
+    num_weeks = timeline_days // 7
+
+    # Compute days elapsed / remaining
+    accepted_at = plan_row.get("accepted_at")
+    if accepted_at:
+        from datetime import datetime as _dt
+        try:
+            start = _dt.fromisoformat(accepted_at)
+        except Exception:
+            start = _dt.now()
+        days_elapsed = (time.time() - start.timestamp()) / 86400
+        days_elapsed = max(0, int(days_elapsed))
+    else:
+        days_elapsed = 0
+    days_remaining = max(0, timeline_days - days_elapsed)
+
+    # Current week
+    current_week = 0
+    for w, data in sorted(summary.get("by_week", {}).items()):
+        if data["completed"] < data["total"]:
+            current_week = w
+            break
+    if current_week == 0 and total > 0:
+        current_week = max(summary.get("by_week", {}).keys(), default=1)
 
     # Header
-    st.markdown('<p class="main-header">Your Dashboard</p>', unsafe_allow_html=True)
-    st.markdown(f'<p class="sub-header">Accepted on {plan_row["accepted_at"] or "N/A"}</p>', unsafe_allow_html=True)
+    plan_status = plan_row["status"]
+    status_label = plan_status.replace("_", " ").upper()
+    badge_class = {
+        "accepted": "badge-accepted",
+        "in_progress": "badge-in_progress",
+        "completed": "badge-completed",
+    }.get(plan_status, "badge-accepted")
 
-    # Metrics row
-    c1, c2, c3, c4 = st.columns(4)
+    st.markdown('<p class="main-header">Your Dashboard</p>', unsafe_allow_html=True)
+    st.markdown(
+        f'<p class="sub-header">{timeline_days}-Day Plan &middot; '
+        f'Accepted on {plan_row["accepted_at"] or "N/A"} &nbsp; '
+        f'<span class="status-badge {badge_class}">{status_label}</span></p>',
+        unsafe_allow_html=True,
+    )
+
+    # ---- Metrics row ----
+    c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
         st.markdown(f"""<div class="metric-card">
             <div class="metric-value">{pct}%</div>
@@ -560,13 +678,6 @@ def page_dashboard():
             <div class="metric-label">Tasks Completed</div>
         </div>""", unsafe_allow_html=True)
     with c3:
-        current_week = 0
-        for w, data in summary.get("by_week", {}).items():
-            if data["completed"] < data["total"]:
-                current_week = w
-                break
-        if current_week == 0 and total > 0:
-            current_week = max(summary.get("by_week", {}).keys(), default=1)
         st.markdown(f"""<div class="metric-card">
             <div class="metric-value">Week {current_week}</div>
             <div class="metric-label">Current Focus</div>
@@ -577,12 +688,137 @@ def page_dashboard():
             <div class="metric-value">{remaining}</div>
             <div class="metric-label">Tasks Remaining</div>
         </div>""", unsafe_allow_html=True)
+    with c5:
+        st.markdown(f"""<div class="metric-card">
+            <div class="metric-value">{days_remaining}</div>
+            <div class="metric-label">Days Left</div>
+        </div>""", unsafe_allow_html=True)
 
+    # ---- Overall progress bar ----
     st.progress(pct / 100)
 
-    # Weekly progress
+    # ---- Visual charts section ----
     st.markdown("---")
-    st.markdown("### Weekly Progress")
+    st.markdown("### Progress Overview")
+
+    chart_col1, chart_col2 = st.columns(2)
+
+    by_week = summary.get("by_week", {})
+
+    # -- Donut chart (overall completion) --
+    with chart_col1:
+        import plotly.graph_objects as go_plotly
+        remaining_tasks = total - completed
+        fig_donut = go_plotly.Figure(data=[go_plotly.Pie(
+            labels=["Completed", "Remaining"],
+            values=[completed, remaining_tasks],
+            hole=0.6,
+            marker=dict(colors=["#28a745", "#e9ecef"]),
+            textinfo="label+percent",
+            hovertemplate="%{label}: %{value} tasks<extra></extra>",
+        )])
+        fig_donut.update_layout(
+            title_text="Overall Completion",
+            showlegend=False,
+            height=320,
+            margin=dict(t=40, b=20, l=20, r=20),
+            annotations=[dict(
+                text=f"<b>{pct}%</b>",
+                x=0.5, y=0.5, font_size=28, showarrow=False,
+            )],
+        )
+        st.plotly_chart(fig_donut, use_container_width=True)
+
+    # -- Weekly bar chart --
+    with chart_col2:
+        week_nums = sorted(by_week.keys())
+        week_done = [by_week[w]["completed"] for w in week_nums]
+        week_rem = [by_week[w]["total"] - by_week[w]["completed"] for w in week_nums]
+        week_labels = [f"Wk {w}" for w in week_nums]
+
+        fig_bar = go_plotly.Figure()
+        fig_bar.add_trace(go_plotly.Bar(
+            name="Completed",
+            x=week_labels, y=week_done,
+            marker_color="#28a745",
+            hovertemplate="Week %{x}: %{y} done<extra></extra>",
+        ))
+        fig_bar.add_trace(go_plotly.Bar(
+            name="Remaining",
+            x=week_labels, y=week_rem,
+            marker_color="#dee2e6",
+            hovertemplate="Week %{x}: %{y} left<extra></extra>",
+        ))
+        fig_bar.update_layout(
+            barmode="stack",
+            title_text="Weekly Task Progress",
+            xaxis_title="Week",
+            yaxis_title="Tasks",
+            height=320,
+            margin=dict(t=40, b=40, l=40, r=20),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        )
+        st.plotly_chart(fig_bar, use_container_width=True)
+
+    # ---- Timeline phase tracker ----
+    st.markdown("---")
+    st.markdown("### Timeline Progress")
+
+    # Build phases proportionally to timeline
+    phase_pct_time = days_elapsed / timeline_days if timeline_days else 0
+    phase_pct_time = min(1.0, max(0.0, phase_pct_time))
+
+    # Phase definitions (proportional to total weeks)
+    phases = []
+    if num_weeks <= 6:
+        phases = [
+            ("Quick Wins", 1, max(2, num_weeks // 3)),
+            ("Skill Building", max(2, num_weeks // 3) + 1, max(4, 2 * num_weeks // 3)),
+            ("Application", max(4, 2 * num_weeks // 3) + 1, num_weeks),
+        ]
+    else:
+        q1 = max(2, num_weeks // 6)
+        q2 = max(q1 + 1, num_weeks * 2 // 5)
+        q3 = max(q2 + 1, num_weeks * 3 // 4)
+        phases = [
+            ("Quick Wins", 1, q1),
+            ("Core Skill Building", q1 + 1, q2),
+            ("Application & Practice", q2 + 1, q3),
+            ("Integration & Measurement", q3 + 1, num_weeks),
+        ]
+
+    phase_html = '<div style="display:flex;gap:4px;margin-bottom:1rem;">'
+    for label, start_w, end_w in phases:
+        width_pct = (end_w - start_w + 1) / num_weeks * 100
+        # Determine color based on current week
+        if current_week > end_w:
+            bg = "#28a745"  # completed phase
+            text_color = "#fff"
+        elif current_week >= start_w:
+            bg = "#007bff"  # active phase
+            text_color = "#fff"
+        else:
+            bg = "#e9ecef"  # future phase
+            text_color = "#666"
+        phase_html += (
+            f'<div style="flex:0 0 {width_pct:.1f}%;background:{bg};color:{text_color};'
+            f'border-radius:6px;padding:0.6rem 0.4rem;text-align:center;font-size:0.78rem;">'
+            f'<b>{label}</b><br>Wk {start_w}-{end_w}'
+            f'</div>'
+        )
+    phase_html += '</div>'
+    st.markdown(phase_html, unsafe_allow_html=True)
+
+    # Day-level progress bar
+    st.markdown(
+        f"**Day {days_elapsed}** of {timeline_days} "
+        f"({int(phase_pct_time * 100)}% of timeline elapsed)"
+    )
+    st.progress(phase_pct_time)
+
+    # ---- Weekly task details ----
+    st.markdown("---")
+    st.markdown("### Weekly Tasks")
 
     progress_items = get_progress(plan_id)
     weeks: dict[int, list] = {}
@@ -597,6 +833,8 @@ def page_dashboard():
         week_pct = int(week_done / week_total * 100) if week_total else 0
 
         with st.expander(f"Week {week_num}  ({week_done}/{week_total} done - {week_pct}%)", expanded=(week_num == current_week)):
+            # Mini progress bar per week
+            st.progress(week_pct / 100)
             for item in items:
                 col_a, col_b = st.columns([0.05, 0.95])
                 with col_a:
@@ -609,6 +847,14 @@ def page_dashboard():
                 with col_b:
                     if bool(item["completed"]) != new_val:
                         update_task_completion(item["id"], new_val)
+                        # Recompute progress and update plan status
+                        updated_summary = get_progress_summary(plan_id)
+                        if updated_summary["total"] > 0 and updated_summary["completed"] == updated_summary["total"]:
+                            update_plan_status(plan_id, "completed")
+                        elif updated_summary["completed"] > 0:
+                            update_plan_status(plan_id, "in_progress")
+                        else:
+                            update_plan_status(plan_id, "accepted")
                         st.rerun()
                     text = item["task_text"]
                     if item["completed"]:
@@ -641,17 +887,24 @@ def page_history():
 
     for p in plans:
         status = p["status"]
-        badge_class = {"accepted": "badge-accepted", "draft": "badge-draft", "rejected": "badge-rejected"}.get(status, "badge-draft")
+        badge_class = {
+            "accepted": "badge-accepted",
+            "draft": "badge-draft",
+            "rejected": "badge-rejected",
+            "in_progress": "badge-in_progress",
+            "completed": "badge-completed",
+        }.get(status, "badge-draft")
         col1, col2, col3 = st.columns([3, 1, 1])
         with col1:
             summary_text = (p["input_summary"] or "No summary")[:120]
-            st.markdown(f"**Plan #{p['id']}** - {summary_text}...")
+            tl_days = p.get("timeline_days") or 90
+            st.markdown(f"**Plan #{p['id']}** ({tl_days}-day) - {summary_text}...")
         with col2:
-            st.markdown(f'<span class="status-badge {badge_class}">{status.upper()}</span>', unsafe_allow_html=True)
+            st.markdown(f'<span class="status-badge {badge_class}">{status.replace("_", " ").upper()}</span>', unsafe_allow_html=True)
         with col3:
             st.caption(str(p["created_at"])[:16])
 
-        if status == "accepted":
+        if status in ("accepted", "in_progress", "completed"):
             with st.expander("View Plan"):
                 st.markdown(p["plan_markdown"])
         st.markdown("---")

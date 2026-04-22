@@ -15,3 +15,6 @@ output_*.md
 *.swo
 .idea/
 .vscode/
+WINDSURF_GUIDE.md
+windsurf_prompt*
+windsurf_workflow.py

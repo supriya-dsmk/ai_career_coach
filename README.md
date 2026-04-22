@@ -11,7 +11,8 @@ Accepts any combination of career-related input and produces:
 1. **Career Input Analysis** - Synthesizes feedback from any source (360 reviews, emails, free-text, file uploads)
 2. **Learning Pathway with Links** - Matches skill gaps to curated resources with direct course URLs
 3. **Schedule Analysis** - Parses your calendar or availability to find realistic learning windows
-4. **90-Day Development Plan** - Creates a structured, schedule-aware roadmap with bite-sized activities
+4. **Custom-Timeline Development Plan** - Creates a structured, schedule-aware roadmap (30-365 days, default 90) with bite-sized activities
+5. **Visual Progress Dashboard** - Interactive charts, phase tracker, and weekly task management
 
 ## Architecture
 
@@ -35,7 +36,7 @@ career_coach_no_crew/
 │   ├── feedback_analyzer.md          # Agent 1: Analyzes any career input
 │   ├── learning_recommender.md       # Agent 2: Recommends resources with links
 │   ├── schedule_analyzer.md          # Agent 3: Identifies available learning windows
-│   └── plan_generator.md            # Agent 4: Creates schedule-aware 90-day plan
+│   └── plan_generator.md            # Agent 4: Creates schedule-aware development plan
 ├── src/
 │   ├── llm_client.py                 # LLM backend wrapper
 │   └── tools.py                      # Tools for agents to use
@@ -79,10 +80,11 @@ Open http://localhost:8501 in your browser. The app lets you:
 - Register / sign in with email + password
 - Upload career input (performance review, feedback docs) or type it directly
 - Upload a schedule file or describe your availability
+- **Choose a plan timeline** (30-365 days, defaults to 90 if not specified)
 - Run the 4-agent pipeline with live progress
 - Review the generated plan, then accept or reject
 - Download the plan as Markdown or have it emailed to you
-- Track weekly progress on an interactive dashboard
+- Track weekly progress on an **interactive visual dashboard** with charts and phase tracking
 
 ---
 
@@ -183,7 +185,8 @@ python main.py --backend ollama
 │  Reads: plan_generator.md               │
 │  Does: Creates schedule-aware plan      │
 │  Uses: All 3 previous agent outputs     │
-│  Output: 90-day development plan        │
+│  Output: N-day development plan         │
+│    (user-chosen timeline, default 90d)  │
 │    with durations on every activity     │
 └─────────────────────────────────────────┘
 ```
@@ -226,13 +229,15 @@ The Streamlit web app (`web/app.py`) provides:
 | **User Accounts** | Register and sign in with email + password |
 | **Career Input Form** | Upload files (PDF, DOCX, TXT) or type/paste text |
 | **Schedule Input** | Upload calendar files or describe availability |
+| **Custom Timeline** | Slider to set plan duration (30-365 days, default 90) |
 | **Live Pipeline** | Watch all 4 agents run with status updates |
 | **Plan Review** | See intermediate agent outputs + final plan |
 | **Accept / Reject** | Accept the plan to activate it, or reject and start over |
 | **Email Delivery** | Accepted plans are emailed (when SMTP is configured) |
 | **Download** | Export plan as Markdown file |
-| **Progress Dashboard** | Weekly task checkboxes, completion metrics, progress bar |
-| **Plan History** | View all past plans with status badges |
+| **Progress Dashboard** | Donut chart, weekly bar chart, phase tracker, days-remaining counter |
+| **Weekly Tasks** | Per-week expandable sections with checkboxes and mini progress bars |
+| **Plan History** | View all past plans with status badges and timeline info |
 
 ### Email Configuration (Optional)
 
@@ -342,9 +347,11 @@ Replace `sample_data/feedback_360.json` with your own data following the same st
 - **Flexible LLM backends** - Works with Anthropic, Ollama, OpenAI, or add your own
 - **Agent behaviors in Markdown** - Easy to read, edit, and version control
 - **Flexible input** - Accepts email, text, files, 360 JSON, or any combination
+- **Custom timeline** - Choose plan duration from 30 to 365 days (default 90)
 - **Schedule-aware plans** - Fits learning into your actual available time
 - **Course links** - Learning recommendations include direct URLs to resources
 - **Web UI** - Full Streamlit app with accounts, progress tracking, and email
+- **Visual dashboard** - Donut chart, weekly bar chart, phase tracker, days-remaining counter
 - **Simple tool calling** - Straightforward regex-based tool detection
 - **Transparent execution** - See exactly what's happening at each step
 
@@ -360,7 +367,8 @@ Replace `sample_data/feedback_360.json` with your own data following the same st
 The system generates a comprehensive Markdown document with:
 
 ```markdown
-# 90-DAY CAREER DEVELOPMENT PLAN
+# [N]-DAY CAREER DEVELOPMENT PLAN
+# (duration chosen by user, default 90 days)
 
 ## EXECUTIVE SUMMARY
 - Focus areas and expected outcomes
@@ -369,10 +377,10 @@ The system generates a comprehensive Markdown document with:
 - 3-4 SMART goals with metrics and timelines
 
 ## WEEK-BY-WEEK ROADMAP
-- Weeks 1-2: Quick wins
-- Weeks 3-6: Core skill building
-- Weeks 7-10: Application
-- Weeks 11-13: Integration
+- Phases scale proportionally to the chosen timeline
+- Quick Wins phase in the early weeks
+- Core skill building in the middle weeks
+- Application & integration in the final weeks
 - Each activity includes duration and format
 
 ## LEARNING RESOURCES SCHEDULE
@@ -388,8 +396,19 @@ The system generates a comprehensive Markdown document with:
 - Peer feedback checkpoints
 
 ## SUCCESS METRICS
-- 30, 60, and 90-day checkpoints
+- Checkpoints proportional to plan duration
 ```
+
+### Dashboard Visuals
+
+When a plan is accepted, the web dashboard shows:
+
+- **Metrics row** - Overall %, tasks completed, current week, tasks remaining, days left
+- **Donut chart** - Visual completion percentage
+- **Weekly bar chart** - Stacked bars showing done vs remaining tasks per week
+- **Phase tracker** - Color-coded timeline phases (green = done, blue = active, gray = future)
+- **Timeline progress bar** - Day X of N with percentage of elapsed time
+- **Per-week mini progress bars** - Inside each expandable week section
 
 ## Troubleshooting
 
@@ -429,6 +448,8 @@ Check that `SMTP_USER` and `SMTP_PASSWORD` are set in your `.env` file. For Gmai
 - [x] ~~Web UI for easier interaction~~ (Done - Streamlit)
 - [ ] Integration with real HR systems
 - [x] ~~Progress tracking and check-ins~~ (Done - Dashboard)
+- [x] ~~Visual progress dashboard~~ (Done - Donut chart, bar chart, phase tracker)
+- [x] ~~Custom plan timeline~~ (Done - 30-365 day slider, default 90)
 - [ ] Multi-employee batch processing
 - [ ] Calendar API integration (Google Calendar, Outlook)
 - [ ] PDF export of development plans
