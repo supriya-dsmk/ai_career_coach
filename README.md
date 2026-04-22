@@ -50,16 +50,14 @@ career_coach_no_crew/
 │   ├── sample_schedule.json          # Sample schedule (JSON)
 │   └── sample_schedule.txt           # Sample schedule (plain text)
 ├── main.py                           # CLI orchestrator
-├── windsurf_workflow.py              # Manual Windsurf workflow
 ├── setup.py                          # Setup helper script
 ├── requirements.txt                  # Python dependencies
 ├── .env.example                      # Environment configuration template
 ├── README.md                         # This file
-├── WINDSURF_GUIDE.md                 # Windsurf workflow guide
-└── QUICKSTART.md                     # Quick start guide
+├── QUICKSTART.md                     # Quick start guide
 ```
 
-## Quick Start - Four Ways to Run
+## Quick Start - Three Ways to Run
 
 ### Option 1: Streamlit Web UI (RECOMMENDED)
 
@@ -124,18 +122,7 @@ python main.py \
 
 ---
 
-### Option 3: Use Windsurf Chat (No API Key)
-
-```bash
-pip install -r requirements.txt
-python windsurf_workflow.py
-```
-
-This interactive script prepares prompts that you paste into Windsurf chat. See **[Windsurf Guide](WINDSURF_GUIDE.md)** for details.
-
----
-
-### Option 4: Automated with Ollama (Free, Local)
+### Option 3: Automated with Ollama (Free, Local)
 
 ```bash
 # 1. Install Ollama from https://ollama.ai
